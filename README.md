@@ -18,4 +18,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * etc -->
 
 
-git remote add origin git@github.com:username/new_repo
