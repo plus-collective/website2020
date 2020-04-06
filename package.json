@@ -19,6 +19,8 @@
     "parcel-bundler": "^1.12.4"
   },
   "dependencies": {
+    "bulma": "^0.8.1",
+    "normalize-scss": "^7.0.1",
     "parcel-plugin-imagemin": "^4.0.1",
     "parcel-plugin-svg-sprite": "^1.4.1"
   }

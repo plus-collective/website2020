@@ -1,0 +1,107 @@
+// IMPORT LIBRARIES
+@import '../../node_modules/normalize-scss/sass/normalize';
+@import './boxSizingFix.scss';
+@import './spacing.scss';
+
+// CUSTOMIZE SOME BULMA ELEMENTS
+$title-color: black;
+$subtitle-color: black;
+
+// IMPORT BULMA
+@import '../../node_modules/bulma/bulma.sass';
+
+
+// BG COLORS
+$bg-hero: #59c7aa;
+$bg-servA: #ff8a90;
+$bg-servB: #f57377;
+$bg-process: whitesmoke;
+$bg-works: #f7ce00;
+$bg-workdetail: #dc6854;
+$bg-contact: whitesmoke;
+
+
+// COVER
+.hero{
+    background-color: $bg-hero;
+    @include mobile{
+        min-height: 50vh !important;
+    }
+}
+
+//SERVICE 
+
+.section.no-padding {
+    padding: 0px;
+}
+
+.column.is-fullheight {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+    @include mobile{
+        min-height: 50vh !important;
+    }
+}
+.bg-servA{
+    background-color: $bg-servA;
+}
+.bg-servB{
+    background-color: $bg-servB;
+}
+
+.container.column-body{
+    background-color: white;
+}
+
+//PROCESS
+
+.bg-process{
+    background-color: $bg-process;
+}
+.section.is-fullheight {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+    @include mobile{
+        min-height: 50vh !important;
+    }
+}
+
+//WORKS
+
+.bg-works{
+    background-color: $bg-works;
+}
+.bg-workdetail{
+    background-color: $bg-workdetail;
+}
+.work-list{
+    min-height: 60vh;
+    @include mobile{
+        min-height: auto;
+    }
+}
+.work-list .box{
+    padding: 3rem;
+    @include tablet{
+        padding-right: 5vw;
+    }
+}
+// TODO: FIX DETAIL OVERLAP
+.work-detail{
+    @include tablet{
+        height: fit-content;
+        position: relative;
+        right: 5vw;
+        top: 10vh;
+        padding: 3rem
+    }
+}
+
+//CONTACT
+.bg-contact{
+    background-color: $bg-contact;
+}
