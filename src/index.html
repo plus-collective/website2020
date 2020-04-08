@@ -11,6 +11,24 @@
 </head>
 
 <body>
+    <!-- PAGE LOADER -->
+    <div class="page-loader">
+        <div class="cube-loader">
+            <div class='loader-style-1 panelLoad'>
+                <div class='cube-face cube-face-front'></div>
+                <div class='cube-face cube-face-back'></div>
+                <div class='cube-face cube-face-left'></div>
+                <div class='cube-face cube-face-right'></div>
+                <div class='cube-face cube-face-bottom'></div>
+                <div class='cube-face cube-face-top'></div>
+            </div>
+            <!-- /Cube panelload -->
+            <span class="cube-face">Plus <br>Collective</span>
+        </div>
+        <!-- /loader -->
+    </div>
+    <!-- END PAGE LOADER -->
+
     <div id="fullpage">
         <section class="page bg-hero">
             <div class="container has-text-white has-text-centered">
@@ -168,26 +186,27 @@
     </div>
 
     <!-- MENU -->
-
-    <!-- TODO: Cambiar href en local -->
+    <!-- Icon -->
     <div class="hamburger hamburger--steps">
         <div class="hamburger__line"></div>
         <div class="hamburger__line"></div>
         <div class="hamburger__line"></div>
     </div>
-    <div class="nav-fullscreen" id="menuFs">
-        <ul class="nav-fullscreen__items">
-            <li class="nav-fullscreen__item"><a class="nav-item" href="/#Cover">Cover</a></li>
-            <li class="nav-fullscreen__item"><a class="nav-item" href="/#Services">Services</a></li>
-            <li class="nav-fullscreen__item"><a class="nav-item" href="/#Process">Process</a></li>
-            <li class="nav-fullscreen__item"><a class="nav-item" href="/#Work">Work</a></li>
-            <li class="nav-fullscreen__item"><a class="nav-item" href="/#Contact">Contact</a></li>
-        </ul>
+    <!-- Overlay -->
+    <div class="menu-overlay menu-overlay-contentpush">
+        <nav>
+            <ul class='linkList'>
+                <li><a class="navLinks" data-destiny="home">Cover</a></li>
+                <li><a class="navLinks" data-destiny="services">Services</a></li>
+                <li><a class="navLinks" data-destiny="process">Process</a></li>
+                <li><a class="navLinks" data-destiny="works">Works</a></li>
+                <li><a class="navLinks" data-destiny="contact" ">Contact</a></li>
+            </ul>
+        </nav>
     </div>
     <!-- END MENU -->
 
-
-    <script src="./js/index.js"></script>
+    <script src=" ./js/index.js"></script>
 </body>
 
 </html>

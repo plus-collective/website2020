@@ -7,15 +7,6 @@
 $title-color: black;
 $subtitle-color: black;
 
-// Bulma
-@import '../../node_modules/bulma/bulma.sass';
-
-//Custom styles
-// @import './styles-fp.scss';
-@import './style-menu.scss';
-
-// ----------------------------------------- //
-
 // COLORS
 $bg-hero: #59c7aa;
 $bg-servA: #ff8a90;
@@ -24,6 +15,19 @@ $bg-process: whitesmoke;
 $bg-works: #f7ce00;
 $bg-workdetail: #dc6854;
 $bg-contact: whitesmoke;
+$bg-menu: #9EBC9E;
+
+// Bulma
+@import '../../node_modules/bulma/bulma.sass';
+
+//Custom styles
+// @import './fadeFP.scss';
+@import './menu.scss';
+@import './pageLoader.scss';
+
+// ----------------------------------------- //
+
+
 
 .container{
     @include mobile{
