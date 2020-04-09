@@ -1,7 +1,7 @@
 // Import libraries
-@import '../../node_modules/normalize-scss/sass/normalize';
-@import './boxSizingFix.scss';
-@import './spacing.scss';
+@import "../../node_modules/normalize-scss/sass/normalize";
+@import "./boxSizingFix.scss";
+@import "./spacing.scss";
 
 // Customize BULMA elements
 $title-color: black;
@@ -15,81 +15,80 @@ $bg-process: whitesmoke;
 $bg-works: #f7ce00;
 $bg-workdetail: #dc6854;
 $bg-contact: whitesmoke;
-$bg-menu: #9EBC9E;
+$bg-menu: #9ebc9e;
 
 // Bulma
-@import '../../node_modules/bulma/bulma.sass';
+@import "../../node_modules/bulma/bulma.sass";
 
 //Custom styles
 // @import './fadeFP.scss';
-@import './menu.scss';
-@import './pageLoader.scss';
+@import "./menu.scss";
+@import "./pageLoader.scss";
+@import "./services.scss";
 
 // ----------------------------------------- //
 
-
-
-.container{
-    @include mobile{
-        padding-left: 32px;
-        padding-right: 32px;
-    }
+.container {
+  @include mobile {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 }
 
-//SERVICE 
-.column.is-fullheight {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+//SERVICE
+.is-fullheight {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 
-    @include mobile{
-        min-height: 50vh !important;
-    }
+  @include mobile {
+    min-height: 50vh !important;
+  }
 }
 
 //WORKS
-.work-list{
-    min-height: 60vh;
-    @include mobile{
-        min-height: auto;
-    }
+.work-list {
+  min-height: 60vh;
+  @include mobile {
+    min-height: auto;
+  }
 }
-.work-list .box{
-    padding: 3rem;
-    @include tablet{
-        padding-right: 5vw;
-    }
+.work-list .box {
+  padding: 3rem;
+  @include tablet {
+    padding-right: 5vw;
+  }
 }
 // TODO: Fix detail overlap
-.work-detail{
-    @include tablet{
-        height: fit-content;
-        position: relative;
-        right: 5vw;
-        top: 10vh;
-        padding: 3rem
-    }
+.work-detail {
+  @include tablet {
+    height: fit-content;
+    position: relative;
+    right: 5vw;
+    top: 10vh;
+    padding: 3rem;
+  }
 }
 
 // Background Colors
 .bg-hero {
-    background-color: $bg-hero;
+  background-color: $bg-hero;
 }
-.bg-servA{
-    background-color: $bg-servA;
+.bg-servA {
+  background-color: $bg-servA;
 }
-.bg-servB{
-    background-color: $bg-servB;
+.bg-servB {
+  background-color: $bg-servB;
 }
-.bg-process{
-    background-color: $bg-process;
+.bg-process {
+  background-color: $bg-process;
 }
-.bg-works{
-    background-color: $bg-works;
+.bg-works {
+  background-color: $bg-works;
 }
-.bg-workdetail{
-    background-color: $bg-workdetail;
+.bg-workdetail {
+  background-color: $bg-workdetail;
 }
-.bg-contact{
-    background-color: $bg-contact;
+.bg-contact {
+  background-color: $bg-contact;
 }

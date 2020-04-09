@@ -2,36 +2,24 @@ import fullpage from '../../node_modules/fullpage.js/dist/fullpage';
 
 
 
-var silentScroll = function( anchor ){
-    fullpage_api.silentMoveTo(2);
-};
-
-//Page Loader
 window.onload = function(){ 
+
+    pageLoader();
+    menu();
+    //For service animation  
+    servAnimation();
+}
+
+// -- START Page loader --//
+var pageLoader = function() {
     let pageLoader = document.querySelector( 'div.page-loader' );
     setTimeout(function () {
         pageLoader.classList.add('page-loader-close');
-    }, 1500);
+    }, 500);
     pageLoader.style.top = window.scrollY +'px';
-
-    menu();
-    silentNavigation();
-
-}
-
-
-var silentNavigation = function(){
-    var elements = document.getElementsByClassName("navLinks");
-    var myFunction = function(event) {
-        fullpage_api.silentMoveTo(event.target.dataset.destiny);
-    };
-    for (var i = 0; i < elements.length; i++) {
-        elements[i].addEventListener('click', myFunction, false);
-    }
 };
 
-
-//Menu functionality
+// -- START Menu functionality --- //
 //TODO:Remember timeout in closing the menu.
 var menu = function() {
 	var container = document.querySelector( 'div.container' ),
@@ -57,13 +45,22 @@ var menu = function() {
         hamburgerBttn.classList.toggle("hamburger--active");
 	};
 	hamburgerBttn.addEventListener( 'click', toggleMenuOverlay );
-	link.addEventListener( 'click', toggleMenuOverlay );
+    link.addEventListener( 'click', toggleMenuOverlay );
+    silentNavigation();
+};
+// Scroll fot menu
+var silentNavigation = function(){
+    var elements = document.getElementsByClassName("navLinks");
+    var actualMove = function(event) {
+        fullpage_api.silentMoveTo(event.target.dataset.destiny);
+    };
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].addEventListener('click', actualMove, false);
+    }
 };
 
-
-//Full Page options
+// -- START Full Page init -->
 new fullpage('#fullpage', {
-
     //Options
     controlArrows: true,
     scrollingSpeed: 300,
@@ -93,5 +90,30 @@ new fullpage('#fullpage', {
 	responsiveHeight: 0,
     // scrollBar:false,
     fixedElements:'.nav-fullscreen, .hamburger',
-
 });
+
+
+
+// Service animation
+let opened = null;
+var servAnimation = function(){
+    var elements = document.getElementsByClassName("cont_card");
+    var animation = function(event) {
+        if (!opened) {
+            opened = event.target.parentElement.id;
+            event.target.parentElement.parentElement.className = "cont_modal cont_modal_active";
+        } else if ( opened === event.target.parentElement.id){
+            event.target.parentElement.parentElement.className = "cont_modal";
+            opened = null
+        } else{
+            document.getElementById("servA").parentElement.className  = "cont_modal"; 
+            document.getElementById("servB").parentElement.className  = "cont_modal"; 
+            opened = event.target.parentElement.id;
+            event.target.parentElement.parentElement.className = "cont_modal cont_modal_active";
+        }
+    };
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].addEventListener('click', animation, false);
+    }
+};
+// -- END Service amation -->
