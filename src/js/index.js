@@ -1,4 +1,5 @@
 import fullpage from '../../node_modules/fullpage.js/dist/fullpage';
+import Swiper from '../../node_modules/swiper/js/swiper';
 
 
 
@@ -92,9 +93,7 @@ new fullpage('#fullpage', {
     fixedElements:'.nav-fullscreen, .hamburger',
 });
 
-
-
-// Service animation
+// -- START Service animation -->
 let opened = null;
 var servAnimation = function(){
     var elements = document.getElementsByClassName("cont_card");
@@ -116,4 +115,22 @@ var servAnimation = function(){
         elements[i].addEventListener('click', animation, false);
     }
 };
-// -- END Service amation -->
+
+// -- START Swiper for works -->
+new Swiper('.blog-slider', {
+    spaceBetween: 30,
+    keyboard: {
+      enabled: true,
+    },
+    effect: 'fade',
+    loop: false,
+    mousewheel: {
+      invert: false,
+    },
+    // autoHeight: true,
+    pagination: {
+      el: '.blog-slider__pagination',
+      clickable: true,
+    }
+  });
+
