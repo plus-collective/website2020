@@ -1,156 +1,220 @@
 // Icon
 .hamburger {
-	position: fixed;
-	z-index: 850;
-	width: 2.5em;
-    height: 2.5em;
-    top: 50px;
-    right: 50px;
-	
-	&:hover{
-		cursor: pointer;
-    }
-    
-    @include mobile{ 
-        top: 20px;
-        right: 20px;
-    }
+  position: fixed;
+  z-index: 850;
+  width: 4em;
+  height: 4em;
+  top: 50px;
+  right: 50px;
+  background-color: white;
+  opacity: 0.6;
+  border-radius: 50%;
+  transition: width 0.3s ease-out;
+  &:hover {
+    cursor: pointer;
+  }
+
+  @include mobile {
+    top: 20px;
+    right: 20px;
+  }
 }
+
 .hamburger__line {
-	content: " ";
-	display: block;
-	width: 100%;
-	height: 0.1875em;
-	background: black;
-	border-radius: 0.5em;
-	margin-bottom: 0.5em;
-	
-	&:last-child{
-		margin-bottom: 0;
-	}
+  content: " ";
+  display: block;
+  width: 50%;
+  margin: auto;
+  height: 0.2em;
+  background: black;
+  opacity: 0.3;
+  border-radius: 0.5em;
+  margin-bottom: 0.5em;
+
+  &:first-child {
+    margin-top: 1.55em;
+  }
 }
 
-.hamburger--steps .hamburger__line {
-	transition: width 0.12s ease-in-out;
-	
-	&:nth-child(2){
-		width: 80%;
-	}
-	&:last-child{
-		width: 55%;
-	}
-}
-	.hamburger--steps-right .hamburger__line {
-		float: right;
-	}
-	.hamburger--steps:hover .hamburger__line {
-		width: 100%;
-	}
-
-.hamburger--active.hamburger--steps .hamburger__line {
-	transition: none;
-	width: 100%;
-}
-.hamburger--active .hamburger__line {
-	position: absolute;
-	top: 0.8em;
-	margin: 0;
-	background: white;
-	
-	&:first-child{
-		transform: rotate(-45deg);
-	}
-	&:nth-child(2){
-		display: none;
-	}
-	&:last-child{
-		transform: rotate(45deg);
-	}
+.hamburger--steps {
+  & .hamburger__line {
+    transition: width 0.3s ease-out;
+  }
+  &:hover .hamburger__line {
+    width: 60%;
+  }
 }
 
-/* Overlay style */
-.menu-overlay {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	background: black;
+.hamburger--active {
+  background-color: transparent;
+
+  &.hamburger--steps .hamburger__line {
+    transition: none;
+    width: 100%;
+  }
+
+  & .hamburger__line {
+    position: absolute;
+    margin: auto;
+    background-color: white;
+    opacity: 0.6;
+
+    &:first-child {
+      transform: translate(0%, 1.8em) rotate(-45deg);
+    }
+
+    &:last-child {
+      transform: translate(0%, 1.8em) rotate(45deg);
+    }
+  }
 }
 
-/* Menu style */
-
-/* Effects */
-html, body {
-	overflow-x: hidden;
-}
+/* Nav */
 
 .menu-overlay nav {
-	text-align: center;
-	position: relative;
-	top: 50%;
-	height: 60%;
-	-webkit-transform: translateY(-50%);
-	transform: translateY(-50%);
+  text-align: center;
+  position: relative;
+  top: 50%;
+  height: 60%;
 }
 
 .menu-overlay ul {
-	list-style: none;
-	padding: 0;
-	margin: 0 auto;
-	display: inline-block;
-	height: 100%;
-	position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  height: 100%;
+  position: relative;
+  text-align: left;
 }
 
 .menu-overlay ul li {
-	display: block;
-	height: 20%;
-	height: calc(100% / 5);
-	min-height: 54px;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
+  display: block;
+  height: 20%;
+  height: calc(100% / 5);
+  // min-height: 54px;
+  line-height: 1.2;
 }
 
 .menu-overlay ul li a {
-	font-size: 54px;
-	font-weight: 300;
-	display: block;
-	color: #fff;
-	-webkit-transition: color 0.2s;
-	transition: color 0.2s;
+  font-size: 54px;
+  font-weight: 300;
+  display: block;
+  color: #f37377;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  font-family: AkkuratB;
 }
 
 .menu-overlay ul li a:hover,
 .menu-overlay ul li a:focus {
-	color: #f0f0f0;
+  color: #f0f0f0;
+}
+
+.homeBtn {
+  text-align: center;
+  width: 60%;
+  color: #502e3f;
+  font-family: CircularStdBook;
+  background-color: #fac903;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  box-shadow: 6px 6px 0px 0px #f37377;
+  padding: 4px 0px;
+
+  & a {
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+    color: #502e3f;
+  }
+  &:hover a {
+    color: white;
+  }
+}
+
+.lineMenu {
+  background-color: #fac903;
+  height: 4px;
+  margin: 1.5rem 80% 1.5rem 0px;
+}
+
+.menuContact {
+  font-family: Akkurat;
+  line-height: 2;
+  @extend .is-size-4;
+
+  & h3 {
+    color: #3e5873;
+  }
+  & a {
+    color: #e2e1cf;
+  }
+  & a:hover {
+    color: white;
+  }
+}
+
+.langMenu {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: 85px;
+  font-family: "Bebas Neue";
+
+  & .itemLang {
+    font-size: 1.2em;
+    font-weight: 900;
+    padding-right: 20px;
+  }
+
+  & .itemLang a {
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+    color: #3e5873;
+  }
+
+  & .itemLang a:hover {
+    color: white;
+  }
+}
+
+/* Overlay */
+.menu-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: black;
+  z-index: 800;
 }
 
 .menu-overlay-contentpush {
-	background: $bg-menu;
-	visibility: hidden;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-	-webkit-transform: translateX(100%);
-	transform: translateX(100%);
-	-webkit-transition: -webkit-transform 0.5s, visibility 0s 0.5s;
-	transition: transform 0.5s, visibility 0s 0.5s;
+  background: $bg-menu;
+  visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.5s, visibility 0s 0.5s;
+  transition: transform 0.5s, visibility 0s 0.5s;
 }
 
 .menu-overlay-contentpush.open {
-	visibility: visible;
-	-webkit-transform: translateX(0%);
-	transform: translateX(0%);
-	-webkit-transition: -webkit-transform 0.5s;
-	transition: transform 0.5s;
+  visibility: visible;
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
 }
 
 @media screen and (max-height: 30.5em) {
-	.menu-overlay nav {
-		height: 70%;
-		font-size: 34px;
-	}
-	.menu-overlay ul li {
-		min-height: 34px;
-	}
+  .menu-overlay nav {
+    height: 70%;
+    font-size: 34px;
+  }
+  .menu-overlay ul li {
+    min-height: 34px;
+  }
 }

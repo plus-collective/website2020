@@ -16,7 +16,7 @@ var pageLoader = function() {
     let pageLoader = document.querySelector( 'div.page-loader' );
     setTimeout(function () {
         pageLoader.classList.add('page-loader-close');
-    }, 500);
+    }, 1000);
     pageLoader.style.top = window.scrollY +'px';
 };
 
@@ -90,7 +90,7 @@ new fullpage('#fullpage', {
 	responsiveWidth: 768,
 	responsiveHeight: 0,
     // scrollBar:false,
-    fixedElements:'.nav-fullscreen, .hamburger',
+    fixedElements:'.nav-fullscreen, .hamburger .brandIcon',
 });
 
 // -- START Service animation -->
@@ -115,22 +115,3 @@ var servAnimation = function(){
         elements[i].addEventListener('click', animation, false);
     }
 };
-
-// -- START Swiper for works -->
-new Swiper('.blog-slider', {
-    spaceBetween: 30,
-    keyboard: {
-      enabled: true,
-    },
-    effect: 'fade',
-    loop: false,
-    mousewheel: {
-      invert: false,
-    },
-    // autoHeight: true,
-    pagination: {
-      el: '.blog-slider__pagination',
-      clickable: true,
-    }
-  });
-

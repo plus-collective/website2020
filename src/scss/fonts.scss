@@ -1,0 +1,31 @@
+// Import Fonts
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+// use: font-family: 'Montserrat', sans-serif;
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+@font-face {
+  font-family: "CircularStdBook";
+  src: url("/assets/fonts/Circular-Std-Book.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "CrimsonTextReg";
+  src: url("/assets/fonts/CrimsonText-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Akkurat";
+  src: url("/assets/fonts/Akkurat.otf");
+}
+
+@font-face {
+  font-family: "AkkuratB";
+  src: url("/assets/fonts/Akkurat-Bold.otf");
+}
+
+@font-face {
+  font-family: "BebasNeue-Bold";
+  src: url("/assets/fonts/BebasNeue-Bold.otf");
+}
