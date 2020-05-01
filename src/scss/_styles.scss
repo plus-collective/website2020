@@ -12,6 +12,7 @@ $bg-works: #1c3562;
 $bg-works2: #2b2b2b;
 $bg-workdetail: #dc6854;
 $bg-contact: #5ac7a8;
+$bg-contact-r: #4db799;
 $bg-menu: #17283a;
 
 // Bulma
@@ -115,6 +116,7 @@ body {
     font-weight: 200;
     box-shadow: 6px 6px 0px 0px #502e3f;
     padding: 5px 0px;
+    cursor: pointer;
   }
 }
 
@@ -157,6 +159,259 @@ body {
 .vidWork {
 }
 
+//CONTACT
+.bgContacto {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  z-index: -1;
+}
+
+.leftContact {
+  font-family: Akkurat;
+  color: #17283a;
+
+  & .titleContact {
+    @extend .p-b-xl;
+  }
+
+  & h1 {
+    @extend .is-size-2;
+    @extend .p-b-lg;
+    font-family: CircularStdBook;
+    font-weight: 600;
+  }
+
+  & h3 {
+    @extend .is-size-4;
+    @extend .p-b-md;
+  }
+  & a {
+    color: white;
+    @extend .is-size-4;
+  }
+  & a:hover {
+    color: #e2e1cf;
+  }
+
+  & footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: "AkkuratB";
+    position: relative;
+
+    & ul {
+      margin: 0 2em;
+      & li {
+        line-height: calc(80px / 3);
+        letter-spacing: 0.1em;
+      }
+    }
+    & a {
+      color: #17283a;
+      @extend .is-size-7;
+    }
+    & a img {
+      height: 80px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+      opacity: 8;
+    }
+
+    & .vl {
+      border-left: 1px solid #17283a;
+      height: 80px;
+      opacity: 0.3;
+    }
+
+    & .copyLeft {
+      margin: 0 2em;
+      & h5 {
+        @extend .is-size-7;
+        @extend .p-b-md;
+        align-items: flex-start;
+      }
+      & p {
+        font-size: 0.6rem;
+        line-height: 2em;
+      }
+    }
+  }
+}
+
+.rightContact {
+  font-family: AkkuratB;
+
+  & label {
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+  }
+  & input {
+    background-color: transparent;
+    border-radius: 0px;
+    outline: 0;
+    border-width: 0 0 1px;
+    border-color: #3e9c8f;
+    box-shadow: none;
+    font-family: Akkurat;
+    color: #17283a;
+
+    &:hover {
+      border-color: #3e9c8f;
+    }
+
+    &:focus {
+      color: #17283a;
+      border-color: #3e9c8f;
+    }
+  }
+
+  & .twoFields {
+    display: flex;
+    flex-direction: row;
+
+    & .field {
+      width: 50%;
+    }
+
+    & .select {
+      width: 100%;
+
+      &::after {
+        border-color: #17283a;
+      }
+
+      & select {
+        background-color: transparent;
+        border-radius: 0px;
+        outline: 0;
+        border-width: 0 0 1px;
+        border-color: #3e9c8f;
+        box-shadow: none;
+        font-family: Akkurat;
+        color: #17283a;
+        width: 100%;
+      }
+    }
+
+    & .wrpRadioBtn {
+      height: 2.5em;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      border-bottom: 1px solid #3e9c8f;
+      padding-left: calc(0.75em - 1px);
+
+      & .radio {
+        justify-content: center;
+      }
+
+      & input[type="radio"] {
+        visibility: hidden;
+        position: absolute;
+      }
+      input[type="radio"] + label {
+        position: relative;
+        width: 33%;
+        font-family: Akkurat;
+        color: #17283a;
+      }
+
+      & input[type="radio"] + label:before {
+        content: "";
+        display: inline-block;
+        height: 15px;
+        width: 15px;
+        background: #3d9a8e;
+        margin-right: 0.2em;
+      }
+
+      & input[type="radio"]#1 + label:before {
+        background: #359457;
+      }
+
+      & input[type="radio"]#2 + label:before {
+        background: #ffcd2f;
+      }
+
+      & input[type="radio"]#3 + label:before {
+        background: #f27930;
+        margin-left: 0.2em;
+      }
+
+      input[type="radio"]:checked + label:after {
+        content: "✓";
+        color: #17283a;
+        z-index: 99;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
+  & textarea {
+    background-color: transparent;
+    border-radius: 0px;
+    outline: 0;
+    border-width: 0 0 1px;
+    border-color: #3e9c8f;
+    box-shadow: none;
+    font-family: Akkurat;
+    color: #17283a;
+    resize: none;
+    min-height: 6em !important;
+
+    &:hover {
+      border-color: #3e9c8f;
+    }
+
+    &:focus {
+      color: #17283a;
+      border-color: #3e9c8f;
+    }
+  }
+
+  & button {
+    @extend .m-t-md;
+    text-align: center;
+    width: 100px;
+    color: #502e3f;
+    font-family: CircularStdBook;
+    background-color: #fac903;
+    border: 1px solid transparent;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    box-shadow: 6px 6px 0px 0px #502e3f;
+    padding: 5px 0px;
+    border-radius: 0px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #3e9c8f;
+    opacity: 1; /* Firefox */
+  }
+
+  :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #3e9c8f;
+  }
+
+  ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #3e9c8f;
+  }
+}
+
 // Background Colors
 .bg-hero {
   background-color: $bg-hero;
@@ -178,4 +433,7 @@ body {
 }
 .bg-contact {
   background-color: $bg-contact;
+}
+.bg-contact-r {
+  background-color: $bg-contact-r;
 }
