@@ -1,24 +1,12 @@
-import fullpage from '../../node_modules/fullpage.js/dist/fullpage';
-import Swiper from '../../node_modules/swiper/js/swiper';
-
-
+import fullpage from 'fullpage.js';
 
 window.onload = function(){ 
-
-    pageLoader();
+    pageLoader("close", 500);
     menu();
-    //For service animation  
-    servAnimation();
+    goToAbout();
+	exitHome();
+    // usMenu();
 }
-
-// -- START Page loader --//
-var pageLoader = function() {
-    let pageLoader = document.querySelector( 'div.page-loader' );
-    setTimeout(function () {
-        pageLoader.classList.add('page-loader-close');
-    }, 1000);
-    pageLoader.style.top = window.scrollY +'px';
-};
 
 // -- START Menu functionality --- //
 //TODO:Remember timeout in closing the menu.
@@ -49,6 +37,7 @@ var menu = function() {
     link.addEventListener( 'click', toggleMenuOverlay );
     silentNavigation();
 };
+
 // Scroll fot menu
 var silentNavigation = function(){
     var elements = document.getElementsByClassName("navLinks");
@@ -78,7 +67,6 @@ new fullpage('#fullpage', {
 	navigationPosition: 'right',
 	navigationTooltips: ['Home','Services','Process','Works','Contact'],
     showActiveTooltip: false,
-    dragAndMove:true,
 
     //Accessibility
 	keyboardScrolling: true,
@@ -93,25 +81,74 @@ new fullpage('#fullpage', {
     fixedElements:'.nav-fullscreen, .hamburger .brandIcon',
 });
 
-// -- START Service animation -->
-let opened = null;
-var servAnimation = function(){
-    var elements = document.getElementsByClassName("cont_card");
-    var animation = function(event) {
-        if (!opened) {
-            opened = event.target.parentElement.id;
-            event.target.parentElement.parentElement.className = "cont_modal cont_modal_active";
-        } else if ( opened === event.target.parentElement.id){
-            event.target.parentElement.parentElement.className = "cont_modal";
-            opened = null
-        } else{
-            document.getElementById("servA").parentElement.className  = "cont_modal"; 
-            document.getElementById("servB").parentElement.className  = "cont_modal"; 
-            opened = event.target.parentElement.id;
-            event.target.parentElement.parentElement.className = "cont_modal cont_modal_active";
-        }
-    };
-    for (var i = 0; i < elements.length; i++) {
-        elements[i].addEventListener('click', animation, false);
+// PARA PAGINA US
+var usMenu = function (){
+
+	var btnTeam = document.querySelector("#btnTeam a")
+	var btnProcess = document.querySelector("#btnProcess a")
+
+	var team = document.querySelector("div .usTeam");
+	var process = document.querySelector("div .usProcess");
+
+	var aux = null;
+
+	btnTeam.onclick = function (e) {
+		if(aux === null){
+			return;
+		}
+		if (aux != e.srcElement.parentNode.id){
+			btnTeam.parentNode.classList.toggle('itemMenuSelected');
+			btnProcess.parentNode.classList.toggle('itemMenuSelected');
+
+			process.classList.toggle('visible');
+			team.classList.toggle('visible');
+			aux = e.srcElement.parentNode.id
+		} 
+	}
+	btnProcess.onclick = function (e) {
+		if (aux != e.srcElement.parentNode.id){
+			btnTeam.parentNode.classList.toggle('itemMenuSelected');
+			btnProcess.parentNode.classList.toggle('itemMenuSelected');
+
+			process.classList.toggle('visible');	
+			team.classList.toggle('visible');
+			aux = e.srcElement.parentNode.id
+		}
+	}
+}
+
+
+// -- START Page loader --//
+var pageLoader = function( action , time, path) {
+    let pageLoader = document.querySelector( 'div.page-loader' );
+    if (action === "close"){
+        setTimeout(function () {
+            pageLoader.classList.add('page-loader-close');
+        }, time);
+        pageLoader.style.top = window.scrollY +'px';
+    } else if (action === "open"){
+        pageLoader.classList.add('page-loader-open');
+        setTimeout(function () {
+			window.location.href = path;
+        }, time);
+        
+    } 
+};
+
+//Ir al Home con efecto
+var exitHome = function() {
+	var linkHome = document.querySelector(".brandIcon img");
+    linkHome.onclick = function (e) {
+		console.log("ACA");
+        // e.preventDefault();
+        pageLoader("open", 500, "/");
+    }
+};
+
+//SALIR DEL HOME CON EL EFECTO CORTINA
+export function goToAbout () {
+    var hereBtn = document.querySelector(".usHomeLeft button");
+    hereBtn.onclick = function (e) {
+        pageLoader("open",500, "/about.html");
     }
 };

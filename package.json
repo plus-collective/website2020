@@ -23,7 +23,6 @@
     "fullpage.js": "^3.0.8",
     "normalize-scss": "^7.0.1",
     "parcel-plugin-imagemin": "^4.0.1",
-    "parcel-plugin-svg-sprite": "^1.4.1",
-    "swiper": "^5.3.6"
+    "parcel-plugin-svg-sprite": "^1.4.1"
   }
 }
