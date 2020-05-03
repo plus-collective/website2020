@@ -111,6 +111,16 @@
   color: #f0f0f0;
 }
 
+.btn-home-menu {
+  @extend .m-t-lg, .m-b-lg;
+  font-size: 1.2em;
+  color: #502e3f;
+  @include my-box-btn(130px, 35px, #fac903, $bg-menu, #f37377, 6px, false);
+  & a {
+    color: #502e3f;
+  }
+}
+
 .homeBtn {
   text-align: center;
   width: 60%;
@@ -172,6 +182,7 @@
     -webkit-transition: color 0.2s;
     transition: color 0.2s;
     color: #3e5873;
+    letter-spacing: 0.1em;
   }
 
   & .itemLang a:hover {

@@ -1,0 +1,87 @@
+@mixin my-box-btn(
+  $width,
+  $height,
+  $btn-color,
+  $bg-color,
+  $sha-color,
+  $depth,
+  $center: false
+) {
+  width: $width + $depth;
+  height: $height + $depth;
+  overflow: hidden;
+  text-align: initial;
+  @if $center {
+    margin: 0 auto;
+  }
+
+  &:hover {
+    & .btn {
+      transform: translate($depth/2, $depth/2);
+    }
+    & .down {
+      transform: translate($depth/2, $depth/2);
+    }
+    & .right {
+      transform: translate($depth/2, $depth/2);
+    }
+  }
+
+  & .btn {
+    text-align: center;
+    width: $width;
+    height: $height;
+    color: $sha-color;
+    font-family: CircularStdBook;
+    background-color: $btn-color;
+    border: none;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 0px 0px;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+  }
+  & .down {
+    height: $depth;
+    width: $width + $depth;
+    background-color: $sha-color;
+    position: relative;
+    //z-index: -10;
+    transition: all 0.2s ease-out;
+
+    &:before {
+      content: "";
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-width: 0px $depth $depth 0px;
+      border-color: transparent transparent $bg-color transparent;
+      left: 0;
+      bottom: 0;
+      position: absolute;
+    }
+  }
+  & .right {
+    margin-top: -($height) -$depth;
+    margin-left: $width;
+    height: $height;
+    width: $depth;
+    background-color: $sha-color;
+    position: relative;
+    //z-index: -10;
+    transition: all 0.2s ease-out;
+
+    &:before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0px $depth $depth 0px;
+      border-color: transparent $bg-color transparent transparent;
+      right: 0;
+      top: 0;
+      position: absolute;
+    }
+  }
+}

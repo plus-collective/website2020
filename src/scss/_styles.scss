@@ -2,6 +2,7 @@
 @import "../../node_modules/normalize-scss/sass/normalize";
 @import "./boxSizingFix.scss";
 @import "./fonts.scss";
+@import "./mixinsWeb.scss";
 
 // COLORS
 $bg-hero: #5ac7a8;
@@ -68,16 +69,16 @@ body {
 }
 
 .titleHome {
-  @extend .is-size-1;
+  @extend .is-size-2;
   font-family: "CrimsonTextReg";
   color: #8de2ca;
 }
 
 .subtitleHome {
-  @extend .is-size-5;
-  font-family: "Montserrat";
+  font-size: 1.8rem;
+  font-family: "CircularStdBook";
   color: #17283a;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 //SERVICE
@@ -102,21 +103,9 @@ body {
     line-height: 1.8;
   }
 
-  & button {
-    @extend .m-t-lg;
-    text-align: center;
-    width: 180px;
-    color: #502e3f;
-    font-family: CircularStdBook;
-    background-color: #fac903;
-    //css issue (?)
-    border: 1px solid transparent;
-    font-size: 1em;
-    text-transform: uppercase;
-    font-weight: 200;
-    box-shadow: 6px 6px 0px 0px #502e3f;
-    padding: 5px 0px;
-    cursor: pointer;
+  & .btn-serv {
+    margin-top: 2rem !important;
+    @include my-box-btn(140px, 30px, #fac903, $bg-servA, #502e3f, 6px, true);
   }
 }
 
@@ -131,6 +120,7 @@ body {
     @extend .is-size-3, .m-b-md;
     font-family: "CircularStdBook";
     color: #502e3f;
+    font-weight: 900;
   }
 
   & p {
@@ -140,19 +130,11 @@ body {
     font-weight: 400;
   }
 
-  & button {
-    text-align: center;
-    width: 120px;
-    color: #502e3f;
-    font-family: CircularStdBook;
-    background-color: #f37377;
-    border: 1px solid transparent;
-    font-size: 1em;
-    text-transform: uppercase;
-    font-weight: 200;
-    box-shadow: 6px 6px 0px 0px #17283a;
-    padding: 5px 0px;
-    cursor: pointer;
+  & .btn-us-home {
+    @include my-box-btn(140px, 30px, #f37377, $bg-process, #502e3f, 6px, false);
+    & a {
+      color: #502e3f;
+    }
   }
 }
 
@@ -216,12 +198,14 @@ body {
       & h2 {
         @extend .is-size-5;
         @extend .p-b-md;
+        font-weight: 900;
       }
 
       & p {
         @extend .is-size-6;
-        font-family: "Montserrat";
-        line-height: 1em;
+        // font-family: "Montserrat";
+        line-height: 1.5em;
+        color: #17283a;
       }
     }
   }
@@ -265,7 +249,8 @@ body {
       }
       & p {
         font-size: 0.8rem !important;
-        font-family: Montserrat;
+        color: #17283a;
+        width: 80%;
       }
     }
   }
@@ -283,6 +268,96 @@ body {
   }
 }
 
+//WORKS
+
+.worksCont {
+  & .column:first-child {
+    // background-color: grey;
+    height: 72vh;
+    padding: 0px;
+    & img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  & .column:nth-child(2) {
+    // background-color: black;
+    position: relative;
+
+    & .workInfo {
+      position: absolute;
+      top: -18vh;
+      left: -150px;
+      width: 300px;
+      background-color: #e2e1cf;
+      padding: 2em;
+      // box-shadow: -25px 25px 0px 0px #1c3562;
+
+      & h2 {
+        font-size: 1.5em;
+        font-weight: 600;
+      }
+
+      & h3 {
+        font-size: 1em;
+        color: grey;
+        font-weight: 400;
+      }
+      & p {
+        @extend .p-t-md, .p-b-md;
+        font-size: 0.8em;
+      }
+
+      & button {
+        font-size: 1em;
+        text-align: center;
+        width: 120px;
+        // color: #1c3562;
+        background-color: #e2e1cf;
+        // border: 3px solid #1c3562;
+        text-transform: uppercase;
+        font-weight: 400;
+        // box-shadow: 4px 4px 0px 0px #1c3562;
+        padding: 5px 0px;
+        cursor: pointer;
+        font-weight: 900;
+        & a {
+          color: inherit;
+        }
+      }
+    }
+  }
+}
+
+.wk-guido {
+  background-color: $bg-works;
+  & .worksCont {
+    & .workInfo {
+      box-shadow: -25px 25px 0px 0px #1c3562;
+      & button {
+        color: #1c3562;
+        border: 3px solid #1c3562;
+        box-shadow: 4px 4px 0px 0px #1c3562;
+      }
+    }
+  }
+}
+
+.wk-sky {
+  background-color: #2b2b2b;
+  & .worksCont {
+    & .workInfo {
+      box-shadow: -25px 25px 0px 0px #2b2b2b;
+      & button {
+        color: #2b2b2b;
+        border: 3px solid #2b2b2b;
+        box-shadow: 4px 4px 0px 0px #2b2b2b;
+      }
+    }
+  }
+}
+
 //CONTACT
 .bgContacto {
   position: absolute;
@@ -293,11 +368,11 @@ body {
 }
 
 .rightContact {
-  font-family: Akkurat;
+  font-family: CircularStdBook;
   color: #17283a;
 
   & .titleContact {
-    @extend .p-b-xl;
+    @extend .p-b-xl, .is-size-2;
   }
 
   & h1 {
@@ -369,11 +444,11 @@ body {
 }
 
 .leftContact {
-  font-family: AkkuratB;
+  font-family: CircularStdBook;
 
   & label {
     font-size: 1rem;
-    letter-spacing: 0.1em;
+    color: #17283a;
   }
   & input {
     background-color: transparent;
@@ -501,24 +576,11 @@ body {
     }
   }
 
-  & button {
+  & .btn-send-contact {
     @extend .m-t-md;
-    text-align: center;
-    width: 100px;
-    color: #502e3f;
-    font-family: CircularStdBook;
-    background-color: #fac903;
-    border: 1px solid transparent;
-    font-size: 1em;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    box-shadow: 6px 6px 0px 0px #502e3f;
-    padding: 5px 0px;
-    border-radius: 0px;
-    text-transform: uppercase;
-    cursor: pointer;
+    @include my-box-btn(100px, 30px, #fac903, $bg-contact, #502e3f, 6px, false);
   }
+
   ::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #3e9c8f;
