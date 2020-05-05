@@ -142,47 +142,62 @@
                 </div>
             </div>
         </section>
-        <section class="page wk-guido">
-            <div class="container worksCont">
-                <div class="columns is-vcentered ">
-                    <div class="column  is-9 is-offset-1 ">
-                        <img src="assets/images/gif/guido.gif">
-                    </div>
-                    <div class="column is-2">
-                        <div class="workInfo">
-                            <h2>Guido Carrillo</h2>
-                            <h3>Website | Blog</h3>
-                            <p>
-                                Working for football player Guido Carrillo we created a fresh design that allowed us to
-                                align the new website with the social media counterpart, in order to enhance our
-                                client´s digital interactions with his followers.
-                            </p>
-                            <button class="btnGoToWork"><a href="https://www.guidomcarrillo.com/">Launch</a></button>
+        <section class="page">
+            <div class="slide wk-guido" data-anchor="guido">
+                <div class="container worksCont">
+                    <div class="columns is-vcentered ">
+                        <div class="column  is-9 is-offset-1 ">
+                            <img src="assets/images/gif/guido.gif">
                         </div>
-                    </div>
-                    <!-- <div class="column is-1"></div> -->
-                </div>
-        </section>
-        <section class="page wk-sky">
-            <div class="container worksCont">
-                <div class="columns is-vcentered ">
-                    <div class="column  is-9 is-offset-1 ">
-                        <img src="assets/images/gif/skyhawk.gif">
-                    </div>
-                    <div class="column is-2">
-                        <div class="workInfo">
-                            <h2>SkyHawk</h2>
-                            <h3>Website</h3>
-                            <p>
-                                Skyhawk, a new drone security business in Argentina, requested a modern identity to make
-                                them stand out. We designed and implemented the new brand within a new website and added
-                                new features and animations in the process.
-                            </p>
-                            <button class="btnGoToWork"><a href="https://skyhawksec.com/">Launch</a></button>
+                        <div class="column is-2">
+                            <div class="workInfo">
+                                <h2>Guido Carrillo</h2>
+                                <h3>Website | Blog</h3>
+                                <p>
+                                    Working for football player Guido Carrillo we created a fresh design that allowed us
+                                    to
+                                    align the new website with the social media counterpart, in order to enhance our
+                                    client´s digital interactions with his followers.
+                                </p>
+                                <div class="btn-launch-guido">
+                                    <button class="btn">launch</button>
+                                    <div class="down"></div>
+                                    <div class="right"></div>
+                                </div>
+                            </div>
                         </div>
+                        <!-- <div class="column is-1"></div> -->
                     </div>
-                    <!-- <div class="column is-1"></div> -->
                 </div>
+            </div>
+            <div class="slide wk-sky" data-anchor="skyhawk">
+                <div class="container worksCont">
+                    <div class="columns is-vcentered ">
+                        <div class="column  is-9 is-offset-1 ">
+                            <img src="assets/images/gif/skyhawk.gif">
+                        </div>
+                        <div class="column is-2">
+                            <div class="workInfo">
+                                <h2>SkyHawk</h2>
+                                <h3>Website</h3>
+                                <p>
+                                    Skyhawk, a new drone security business in Argentina, requested a modern identity to
+                                    make
+                                    them stand out. We designed and implemented the new brand within a new website and
+                                    added
+                                    new features and animations in the process.
+                                </p>
+                                <div class="btn-launch-sky">
+                                    <button class="btn">launch</button>
+                                    <div class="down"></div>
+                                    <div class="right"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="column is-1"></div> -->
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="page">
             <div class="container">
@@ -268,7 +283,7 @@
                         </div>
                         <footer>
                             <a href="http://qr.afip.gob.ar/?qr=CruQ_DhU5lHiV8ROWJ4HUQ,," target="_F960AFIPInfo">
-                                <img src="http://www.afip.gob.ar/images/f960/DATAWEB.jpg" border="0">
+                                <!--SE CAYO LA AFIP <img src="http://www.afip.gob.ar/images/f960/DATAWEB.jpg" border="0"> -->
                             </a>
                             <ul>
                                 <li>
@@ -326,11 +341,13 @@
                     <div class="container is-fluid  ">
                         <nav>
                             <ul class='linkList'>
-                                <div class="navLinks homeBtn m-t-lg m-b-lg">
-                                    <a data-destiny="home">Home</a>
+                                <div class="btn-home-menu navLinks">
+                                    <button class="btn"><a data-destiny="home">Home</a></button>
+                                    <div class="down"></div>
+                                    <div class="right"></div>
                                 </div>
                                 <li><a class="navLinks" data-destiny="services">Services</a></li>
-                                <li><a class="navLinks" data-destiny="process">Us</a></li>
+                                <li><a class="navLinks" data-destiny="about" href="/aboutA.html">Us</a></li>
                                 <li><a class="navLinks" data-destiny="works">Works</a></li>
                                 <li>
                                     <hr class="lineMenu">
@@ -360,7 +377,8 @@
     </div>
     <!-- END MENU -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
-    <script src=" ./js/about.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/fp-about-b.js"></script>
 </body>
 
 </html>

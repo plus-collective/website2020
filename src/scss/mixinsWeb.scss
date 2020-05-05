@@ -5,7 +5,8 @@
   $bg-color,
   $sha-color,
   $depth,
-  $center: false
+  $center: false,
+  $border: false
 ) {
   width: $width + $depth;
   height: $height + $depth;
@@ -41,6 +42,10 @@
     padding: 0px 0px;
     cursor: pointer;
     transition: all 0.2s ease-out;
+
+    @if $border {
+      border: 3px solid $sha-color;
+    }
   }
   & .down {
     height: $depth;

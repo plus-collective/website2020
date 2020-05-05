@@ -5,7 +5,7 @@ window.onload = function(){
     menu();
     goToAbout();
 	exitHome();
-    // usMenu();
+    usMenu();
 }
 
 // -- START Menu functionality --- //
@@ -33,59 +33,54 @@ var menu = function() {
         }
         hamburgerBttn.classList.toggle("hamburger--active");
 	};
+	silentNavigation();
 	hamburgerBttn.addEventListener( 'click', toggleMenuOverlay );
     link.addEventListener( 'click', toggleMenuOverlay );
-    silentNavigation();
+
 };
 
 // Scroll fot menu
 var silentNavigation = function(){
     var elements = document.getElementsByClassName("navLinks");
-    var actualMove = function(event) {
-        fullpage_api.silentMoveTo(event.target.dataset.destiny);
-    };
+	
+	if( ! window.location.pathname.includes("about")){
+		//at Home
+		var actualMove = function(event) {
+			
+			if(event.target.dataset.destiny === "about"){
+				event.preventDefault();
+				pageLoader("open", 500, "/aboutA.html");
+			} else{
+				fullpage_api.silentMoveTo(event.target.dataset.destiny);
+			}
+		};
+	} else{
+		//att about A or B 
+		var actualMove = function(event) {
+			event.preventDefault();
+			if(event.target.dataset.destiny === "about"){
+				pageLoader("open", 500, "/aboutA.html");
+			} else{
+				pageLoader("open", 500, "/#"+event.target.dataset.destiny);
+			}
+			
+		};
+	}
+
     for (var i = 0; i < elements.length; i++) {
         elements[i].addEventListener('click', actualMove, false);
     }
 };
-
-// -- START Full Page init -->
-new fullpage('#fullpage', {
-    //Options
-    controlArrows: true,
-    scrollingSpeed: 300,
-    lazyLoading: true,
-
-    //Custom selectors
-    sectionSelector: '.page',
-
-    //Navigation
-	menu: '#menu',
-	lockAnchors: false,
-	anchors:['home','services','process','works','contact'],
-	navigation: true,
-	navigationPosition: 'right',
-	navigationTooltips: ['Home','Services','Process','Works','Contact'],
-    showActiveTooltip: false,
-
-    //Accessibility
-	keyboardScrolling: true,
-	animateAnchor: true,
-    recordHistory: true,
-    
-	//Design
-	verticalCentered: true,
-	responsiveWidth: 768,
-	responsiveHeight: 0,
-    // scrollBar:false,
-    fixedElements:'.nav-fullscreen, .hamburger .brandIcon',
-});
 
 // PARA PAGINA US
 var usMenu = function (){
 
 	var btnTeam = document.querySelector("#btnTeam a")
 	var btnProcess = document.querySelector("#btnProcess a")
+
+	if(btnTeam === null || btnProcess === null){
+		return ;
+	}
 
 	var team = document.querySelector("div .usTeam");
 	var process = document.querySelector("div .usProcess");
@@ -117,7 +112,6 @@ var usMenu = function (){
 	}
 }
 
-
 // -- START Page loader --//
 var pageLoader = function( action , time, path) {
     let pageLoader = document.querySelector( 'div.page-loader' );
@@ -127,7 +121,8 @@ var pageLoader = function( action , time, path) {
         }, time);
         pageLoader.style.top = window.scrollY +'px';
     } else if (action === "open"){
-        pageLoader.classList.add('page-loader-open');
+		pageLoader.classList.add('page-loader-open');
+		console.log("ACAAA4");
         setTimeout(function () {
 			window.location.href = path;
         }, time);
@@ -139,16 +134,21 @@ var pageLoader = function( action , time, path) {
 var exitHome = function() {
 	var linkHome = document.querySelector(".brandIcon img");
     linkHome.onclick = function (e) {
-		console.log("ACA");
-        // e.preventDefault();
+        e.preventDefault();
         pageLoader("open", 500, "/");
     }
 };
 
 //SALIR DEL HOME CON EL EFECTO CORTINA
-export function goToAbout () {
-    var hereBtn = document.querySelector(".usHomeLeft button");
-    hereBtn.onclick = function (e) {
-        pageLoader("open",500, "/about.html");
-    }
+var goToAbout = function() {
+	console.log("ACAAA");
+	var hereBtn = document.querySelector(".usHomeLeft button" );
+	if(hereBtn !== null){
+		console.log("ACAAA2");
+		hereBtn.onclick = function (e) {
+			e.preventDefault();
+			pageLoader("open",500, "/aboutB.html");
+			console.log("ACAAA3");
+		}
+	}
 };

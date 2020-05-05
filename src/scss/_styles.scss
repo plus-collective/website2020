@@ -22,7 +22,7 @@ $bg-menu: #17283a;
 @import "./spacing.scss";
 
 //Custom Styles
-// @import './fadeFP.scss';
+@import "./fadeFP.scss";
 @import "./menu.scss";
 @import "./pageLoader.scss";
 
@@ -53,13 +53,19 @@ body {
 //BRAND ICON
 .brandIcon {
   position: fixed;
-  z-index: 1000;
+  z-index: 860;
   top: 25px;
   left: 25px;
-}
-.brandIcon img {
-  height: 60px;
-  opacity: 0.6;
+
+  & img {
+    height: 60px;
+    opacity: 0.8;
+    transition: all 0.2s ease-out;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
 }
 
 //HOME
@@ -69,16 +75,21 @@ body {
 }
 
 .titleHome {
-  @extend .is-size-2;
-  font-family: "CrimsonTextReg";
-  color: #8de2ca;
-}
-
-.subtitleHome {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
+  // @extend .is-size-2;
   font-family: "CircularStdBook";
   color: #17283a;
   font-weight: 700;
+
+  & span {
+    color: #e2e1cf;
+  }
+}
+
+.subtitleHome {
+  @extend .is-size-2;
+  font-family: "CrimsonTextReg";
+  color: #8de2ca;
 }
 
 //SERVICE
@@ -139,7 +150,6 @@ body {
 }
 
 //US -> PAGE
-
 .usMenu {
   // margin-left: 3rem;
   // margin-right: -3rem;
@@ -269,7 +279,6 @@ body {
 }
 
 //WORKS
-
 .worksCont {
   & .column:first-child {
     // background-color: grey;
@@ -308,23 +317,8 @@ body {
         @extend .p-t-md, .p-b-md;
         font-size: 0.8em;
       }
-
-      & button {
-        font-size: 1em;
-        text-align: center;
-        width: 120px;
-        // color: #1c3562;
-        background-color: #e2e1cf;
-        // border: 3px solid #1c3562;
-        text-transform: uppercase;
-        font-weight: 400;
-        // box-shadow: 4px 4px 0px 0px #1c3562;
-        padding: 5px 0px;
-        cursor: pointer;
-        font-weight: 900;
-        & a {
-          color: inherit;
-        }
+      & a {
+        color: inherit;
       }
     }
   }
@@ -335,10 +329,18 @@ body {
   & .worksCont {
     & .workInfo {
       box-shadow: -25px 25px 0px 0px #1c3562;
-      & button {
-        color: #1c3562;
-        border: 3px solid #1c3562;
-        box-shadow: 4px 4px 0px 0px #1c3562;
+      color: #1c3562;
+      & .btn-launch-guido {
+        @include my-box-btn(
+          100px,
+          30px,
+          #e2e1cf,
+          #e2e1cf,
+          #1c3562,
+          4px,
+          false,
+          true
+        );
       }
     }
   }
@@ -349,10 +351,40 @@ body {
   & .worksCont {
     & .workInfo {
       box-shadow: -25px 25px 0px 0px #2b2b2b;
-      & button {
-        color: #2b2b2b;
-        border: 3px solid #2b2b2b;
-        box-shadow: 4px 4px 0px 0px #2b2b2b;
+      color: #2b2b2b;
+      & .btn-launch-sky {
+        @include my-box-btn(
+          100px,
+          30px,
+          #e2e1cf,
+          #e2e1cf,
+          #2b2b2b,
+          4px,
+          false,
+          true
+        );
+      }
+    }
+  }
+}
+
+.wk-ga {
+  background-color: #3a3a47;
+  & .worksCont {
+    & .workInfo {
+      box-shadow: -25px 25px 0px 0px #3a3a47;
+      color: #3a3a47;
+      & .btn-launch-sky {
+        @include my-box-btn(
+          100px,
+          30px,
+          #e2e1cf,
+          #e2e1cf,
+          #3a3a47,
+          4px,
+          false,
+          true
+        );
       }
     }
   }
@@ -362,7 +394,7 @@ body {
 .bgContacto {
   position: absolute;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   top: 0;
   z-index: -1;
 }
@@ -602,6 +634,7 @@ body {
 .bg-hero {
   background-color: $bg-hero;
 }
+
 .bg-servA {
   background-color: $bg-servA;
 }

@@ -2,16 +2,17 @@
 .hamburger {
   position: fixed;
   z-index: 850;
-  width: 3em;
-  height: 3em;
   top: 25px;
   right: 25px;
-  background-color: white;
-  opacity: 0.6;
-  border-radius: 50%;
-  transition: width 0.3s ease-out;
-  &:hover {
-    cursor: pointer;
+  cursor: pointer;
+  & img {
+    height: 50px;
+    transition: all 0.2s ease-out;
+    opacity: 0.8;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
   }
 
   @include mobile {
@@ -67,10 +68,80 @@
       transform: translate(0%, 1.8em) rotate(45deg);
     }
   }
+
+  // & img:first-child {
+  //   //display: none;
+  // }
+}
+
+/* Floating Menu*/
+#float-menu {
+  position: fixed;
+  z-index: 600;
+  top: 100px;
+  right: 30px;
+  text-align: left;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 0.8em;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+
+  & li {
+    float: left;
+    & a {
+      transition: all 0.2s ease-in-out;
+      color: #e2e1cf;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+
+  & .active a {
+    color: white;
+  }
+
+  // work line changue on active element
+  & .active ul {
+    display: flex;
+    & li a hr {
+      background-color: whitesmoke;
+    }
+    & li:first-child a hr {
+      background-color: whitesmoke;
+      width: 20px;
+    }
+  }
+
+  & .linesWork {
+    font-size: 0.6em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    display: none;
+
+    & a {
+      color: rgba(0, 0, 0, 0.5);
+    }
+
+    & hr {
+      height: 3px;
+      //color: white;
+      background-color: rgba(0, 0, 0, 0.2);
+      width: 10px;
+      margin: 0.6em 5px;
+
+      &:hover {
+        background-color: white;
+      }
+    }
+  }
 }
 
 /* Nav */
-
 .menu-overlay nav {
   text-align: center;
   position: relative;
@@ -118,28 +189,6 @@
   @include my-box-btn(130px, 35px, #fac903, $bg-menu, #f37377, 6px, false);
   & a {
     color: #502e3f;
-  }
-}
-
-.homeBtn {
-  text-align: center;
-  width: 60%;
-  color: #502e3f;
-  font-family: CircularStdBook;
-  background-color: #fac903;
-  font-size: 1.2em;
-  text-transform: uppercase;
-  font-weight: 600;
-  box-shadow: 6px 6px 0px 0px #f37377;
-  padding: 4px 0px;
-
-  & a {
-    -webkit-transition: color 0.2s;
-    transition: color 0.2s;
-    color: #502e3f;
-  }
-  &:hover a {
-    color: white;
   }
 }
 
