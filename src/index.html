@@ -5,7 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- android chrome color -->
+    <meta name="theme-color" content="#5ac7a8" />
+    <!-- favicon  99% -->
+    <!-- <link rel="shortcut icon" type="image/png" href="/img/icon-192x192.png">
+    <link rel="shortcut icon" sizes="192x192" href="/img/icon-192x192.png">
+    <link rel="apple-touch-icon" href="/img/icon-192x192.png"> -->
+
     <title>Plus collective 2020</title>
+
+
+    <!-- css -->
     <link rel="stylesheet" type="text/css" href="../node_modules/fullpage.js/dist/fullpage.css" />
     <link rel="stylesheet" href="./scss/_styles.scss" />
 </head>
@@ -16,15 +26,21 @@
         <img src="assets/images/load1.png">
         <!-- /loader -->
     </div>
-    <!-- END PAGE LOADER -->
+
+    <!-- BRAND ICON -->
+    <div class="brandIcon">
+        <a>
+            <img src="assets/images/logoW.png" alt="Plus Collective Logo">
+        </a>
+    </div>
 
     <!-- MAIN CONTENT  -->
     <div id="fullpage">
         <section class="page bg-hero">
             <div class="container has-text-centered">
-                <div class="columns is-gapless ">
-                    <div class="column is-fullheight is-half">
-                        <div class="container is-fluid has-text-left">
+                <div class="columns ">
+                    <div class="column is-fullheight is-5 is-offset-1">
+                        <div class="container  has-text-left">
                             <h2 class="subtitleHome">
                                 Hola!
                             </h2>
@@ -36,8 +52,8 @@
                             </h1>
                         </div>
                     </div>
-                    <div class="column is-fullheight is-half">
-                        <div class="container is-fluid">
+                    <div class="column is-fullheight is-5">
+                        <div class="container ">
                             <svg class="illHome">
                                 <use href="assets/svg/portada.svg">
                             </svg>
@@ -59,7 +75,7 @@
                             <li>Consultancy</li>
                         </ul>
                         <div class="btn-serv">
-                            <button class="btn">I want this!</button>
+                            <button class="btn">Reach us</button>
                             <div class="down"></div>
                             <div class="right"></div>
                         </div>
@@ -77,7 +93,7 @@
                             <li>Consultancy</li>
                         </ul>
                         <div class="btn-serv">
-                            <button class="btn">I want this!</button>
+                            <button class="btn">let's chat</button>
                             <div class="down"></div>
                             <div class="right"></div>
                         </div>
@@ -109,7 +125,7 @@
                                 Check out who we are and how we work.
                             </p>
                             <div class="btn-us-home">
-                                <button class="btn"><a href="/aboutB.html">ABOUT US</a></button>
+                                <button class="btn"><a href="/about.html">ABOUT US</a></button>
                                 <div class="down"></div>
                                 <div class="right"></div>
                             </div>
@@ -215,9 +231,9 @@
             </div>
         </section>
         <section class="page">
-            <div class="container">
-                <div class="columns is-variable is-8 is-vcentered">
-                    <div class="column is-4 is-offset-1 leftContact">
+            <div class="columns is-gapless contact-us">
+                <div class="column is-6 is-fullheight leftContact">
+                    <div class="wrpContactA">
                         <div class="field">
                             <label class="label">Name</label>
                             <p class="control">
@@ -225,13 +241,13 @@
                             </p>
                         </div>
                         <div class="twoFields">
-                            <div class="field">
+                            <div class="field A">
                                 <label class="label">Phone</label>
                                 <p class="control">
                                     <input class="input" type="text" placeholder="Text input">
                                 </p>
                             </div>
-                            <div class="field">
+                            <div class="field B">
                                 <label class="label">Email</label>
                                 <p class="control has-icon has-icon-right">
                                     <input class="input" type="text" placeholder="Hello@">
@@ -243,7 +259,7 @@
                             </div>
                         </div>
                         <div class="twoFields">
-                            <div class="field">
+                            <div class="field A">
                                 <label class="label">Project type</label>
                                 <p class="control has-icon has-icon-right is-expanded">
                                     <span class="select">
@@ -258,7 +274,7 @@
                                     </span>
                                 </p>
                             </div>
-                            <div class="field">
+                            <div class="field B">
                                 <label class="label">Time to market</label>
                                 <div class="control wrpRadioBtn">
                                     <input type="radio" name="ttm" id="1" value="3wk" />
@@ -289,8 +305,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="column is-2"></div>
-                    <div class="column is-5 rightContact">
+                </div>
+                <div class="column is-6 is-fullheight rightContact">
+                    <div class="wrpContactB">
                         <h1 class="titleContact">Let´s work together</h1>
                         <div class="p-b-md">
                             <h3>Call us,</h3>
@@ -302,17 +319,17 @@
                         </div>
                         <footer>
                             <a href="http://qr.afip.gob.ar/?qr=CruQ_DhU5lHiV8ROWJ4HUQ,," target="_F960AFIPInfo">
-                                <img src="http://www.afip.gob.ar/images/f960/DATAWEB.jpg" border="0">
+                                <img src="assets/images/afip.jpg" border="0">
                             </a>
                             <ul>
                                 <li>
-                                    <a href="">SERVICE</a>
+                                    <a href="#services">SERVICE</a>
                                 </li>
                                 <li>
-                                    <a href="">ABOUT US</a>
+                                    <a href="#about">ABOUT US</a>
                                 </li>
                                 <li>
-                                    <a href="">WORK</a>
+                                    <a href="#works">WORK</a>
                                 </li>
                             </ul>
                             <div class="vl"></div>
@@ -328,27 +345,12 @@
                     </div>
                 </div>
             </div>
-            <!-- background divided -->
-            <div class="columns is-gapless has-text-centered bgContacto">
-                <div class="column is-fullheight bg-contact">
-                </div>
-                <div class="column is-fullheight bg-contact-r">
-                </div>
-            </div>
         </section>
-
     </div>
     <!-- END MAIN CONTENT  -->
 
-    <!-- BRAND ICON -->
-    <div class="brandIcon">
-        <a>
-            <img src="assets/images/logoW.png" alt="Plus Collective Logo">
-        </a>
-    </div>
     <!-- MENU -->
-
-    <!-- FLOAT -->
+    <!-- Float -->
     <div id='wrp-float-menu'>
         <ul id="float-menu">
             <li data-menuanchor="home" class="active"><a href="#home">HOME</a></li>
@@ -363,6 +365,11 @@
                     </li>
                     <li data-menuanchor="skyhawk">
                         <a href="#works/skyhawk">
+                            <hr>
+                        </a>
+                    </li>
+                    <li data-menuanchor="ga">
+                        <a href="#works/ga">
                             <hr>
                         </a>
                     </li>
@@ -389,7 +396,7 @@
                                     <div class="right"></div>
                                 </div>
                                 <li><a class="navLinks" data-destiny="services">Services</a></li>
-                                <li><a class="navLinks" data-destiny="about" href="/aboutA.html">Us</a></li>
+                                <li><a class="navLinks" data-destiny="about" href="/about.html">Us</a></li>
                                 <li><a class="navLinks" data-destiny="works">Works</a></li>
                                 <li>
                                     <hr class="lineMenu">
@@ -408,9 +415,24 @@
                             <a href="mailto:us@pluscollective.io">us@pluscollective.io</a>
                         </div>
                         <div class="langMenu">
-                            <div class="itemLang"><a src="#">español</a></div>
-                            <div class="itemLang"><a src="#">english</a></div>
-                            <div class="itemLang"><a src="#">Dutch</a></div>
+                            <div class="itemLang">
+                                <a src="#">
+                                    <img src="assets/images/b-es.png">
+                                    español
+                                </a>
+                            </div>
+                            <div class="itemLang">
+                                <a src="#">
+                                    <img src="assets/images/b-en.png">
+                                    english
+                                </a>
+                            </div>
+                            <div class="itemLang">
+                                <a src="#">
+                                    <img src="assets/images/b-nl.png">
+                                    Dutch
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -418,6 +440,7 @@
         </div>
     </div>
     <!-- END MENU -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
     <script src="js/home.js"></script>
     <script src="js/fp-home.js"></script>

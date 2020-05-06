@@ -5,29 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- android chrome color -->
+    <meta name="theme-color" content="#5ac7a8" />
+    <!-- favicon  99% -->
+    <!-- <link rel="shortcut icon" type="image/png" href="/img/icon-192x192.png">
+    <link rel="shortcut icon" sizes="192x192" href="/img/icon-192x192.png">
+    <link rel="apple-touch-icon" href="/img/icon-192x192.png"> -->
+
     <title>Plus collective 2020</title>
+
+
+    <!-- css -->
     <link rel="stylesheet" type="text/css" href="../node_modules/fullpage.js/dist/fullpage.css" />
-    <link rel="stylesheet" href="scss/_styles.scss" />
+    <link rel="stylesheet" href="./scss/_styles.scss" />
 </head>
 
 <body>
     <!-- PAGE LOADER -->
-    <div class="page-loader">
-        <div class="cube-loader">
-            <!-- <div class='loader-style-1 panelLoad'>
-                <div class='cube-face cube-face-front'></div>
-                <div class='cube-face cube-face-back'></div>
-                <div class='cube-face cube-face-left'></div>
-                <div class='cube-face cube-face-right'></div>
-                <div class='cube-face cube-face-bottom'></div>
-                <div class='cube-face cube-face-top'></div>
-            </div> -->
-            <!-- /Cube panelload -->
-            <span class="cube-face">Plus <br>Collective</span>
-        </div>
+    <div class="page-loader ">
+        <img src="assets/images/load1.png">
         <!-- /loader -->
     </div>
-    <!-- END PAGE LOADER -->
+
+    <!-- BRAND ICON -->
+    <div class="brandIcon">
+        <a>
+            <img src="assets/images/logoW.png" alt="Plus Collective Logo">
+        </a>
+    </div>
 
     <!-- MAIN CONTENT  -->
     <div id="fullpage">
@@ -60,113 +65,107 @@
             </div>
         </section>
         <section class="page">
-            <div class="container">
-                <div class="columns is-variable is-8">
-                    <div class="column is-3 is-offset-1 usMenu">
-                        <div class="wrpMenu">
-                            <h1 id="btnTeam" class="itemMenu itemMenuSelected">
-                                <a>Team</a>
-                            </h1>
-                            <h1 id="btnProcess" class="itemMenu">
-                                <a>Work Process</a>
-                            </h1>
-                            <button>WORKS</button>
-                        </div>
-                    </div>
-                    <div class="column is-8 usTeam visible">
-                        <div class="columns is-vcentered">
-                            <div class="column teamName">
-                                <div class="teamMember">
-                                    <h2>EMILIANO <br>GAITÁN</h2>
-                                    <p>Development and <br>Communication</p>
-                                </div>
-                                <div class="teamMember">
-                                    <h2>PATRICIO <br>BERTACCHINI</h2>
-                                    <p>Graphic Design and <br>ideas</p>
-                                </div>
-                            </div>
-                            <div class="column illusTeam">
-                                <svg>
-                                    <use href="assets/svg/ep.svg">
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column is-8 usProcess ">
-                        <div class="columns ">
-                            <div class="column is-4">
-                                <div class="itemPr">
-                                    <h3>Meet</h3>
-                                    <img src="assets/images/1.png">
-                                </div>
-                                <p>
-                                    Check out who we are and how we work hereWe have a (virtual) coffee, chat and
-                                    get to
-                                    know you, your project and its necessities
-                                </p>
-                            </div>
-                            <div class="column is-4">
-                                <div class="itemPr">
-                                    <h3>Think</h3>
-                                    <img src="assets/images/2.png">
-                                </div>
-                                <p>
-                                    By brainstorming, exploring and sharing ideas we design a strategy that will
-                                    provide
-                                    the solution you are looking for.
-                                </p>
-                            </div>
-                            <div class="column is-4">
-                                <div class="itemPr">
-                                    <h3>Create</h3>
-                                    <img src="assets/images/3.png">
-                                </div>
-                                <p>
-                                    We bring our ideas to life, giving our best to provide optimal results.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="columns">
-                            <div class="column is-4">
-                                <div class="itemPr">
-                                    <h3>Test</h3>
-                                    <img src="assets/images/4.png">
-                                </div>
-                                <p>
-                                    With a rigorous approach we test everything we make to guarantee successful
-                                    results.
-                                </p>
-                            </div>
-                            <div class="column is-4">
-                                <div class="itemPr">
-                                    <h3>Deliver</h3>
-                                    <img src="assets/images/5.png">
-                                </div>
-                                <p>
-                                    We ensure the delivery and publication of your product or brand identity, always
-                                    aligned with the strategy and your necessities.
-                                </p>
-                            </div>
-                            <div class="column is-4">
-                                <div class="itemPr">
-                                    <h3>Follow</h3>
-                                    <img src="assets/images/6.png">
-                                </div>
-                                <p>
-                                    We will be there for you. We want to know how our tools enhanced the relation
-                                    with
-                                    your clients.
-                                </p>
-                            </div>
+            <div class="columns  is-gapless about-us">
+                <div class="column is-4 is-fullheight usMenu">
+                    <div class="wrpMenuUs">
+                        <h1 id="btnTeam" class="itemMenu itemMenuSelected">
+                            <a>Team</a>
+                        </h1>
+                        <h1 id="btnProcess" class="itemMenu">
+                            <a>Work Process</a>
+                        </h1>
+                        <div class="btn-about-us">
+                            <button class="btn"><a href="#works">WORKS</a></button>
+                            <div class="down"></div>
+                            <div class="right"></div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- background divided -->
-            <div class="columns is-gapless has-text-centered bgContacto">
-                <div class="column is-one-third is-fullheight bg-contact-r">
+                <div class="column is-1"></div>
+                <div class="column is-6 is-fullheight usTeam active">
+                    <div class="columns is-vcentered">
+                        <div class="column teamName">
+                            <div class="teamMember">
+                                <h2>EMILIANO <br>GAITÁN</h2>
+                                <p>Development and <br>Communication</p>
+                            </div>
+                            <div class="teamMember">
+                                <h2>PATRICIO <br>BERTACCHINI</h2>
+                                <p>Graphic Design and <br>ideas</p>
+                            </div>
+                        </div>
+                        <div class="column illusTeam">
+                            <svg>
+                                <use href="assets/svg/ep.svg">
+                            </svg>
+                        </div>
+                    </div>
                 </div>
-                <div class="column is-two-thirds is-fullheight bg-contact">
+                <div class="column is-6 is-fullheight usProcess">
+                    <div class="columns is-multiline ">
+                        <div class="column is-4">
+                            <div class="itemPr">
+                                <h3>Meet</h3>
+                                <img src="assets/images/1.png">
+                            </div>
+                            <p>
+                                Check out who we are and how we work hereWe have a (virtual) coffee, chat and
+                                get to
+                                know you, your project and its necessities
+                            </p>
+                        </div>
+                        <div class="column is-4">
+                            <div class="itemPr">
+                                <h3>Think</h3>
+                                <img src="assets/images/2.png">
+                            </div>
+                            <p>
+                                By brainstorming, exploring and sharing ideas we design a strategy that will
+                                provide
+                                the solution you are looking for.
+                            </p>
+                        </div>
+                        <div class="column is-4">
+                            <div class="itemPr">
+                                <h3>Create</h3>
+                                <img src="assets/images/3.png">
+                            </div>
+                            <p>
+                                We bring our ideas to life, giving our best to provide optimal results.
+                            </p>
+                        </div>
+                        <div class="column is-4">
+                            <div class="itemPr">
+                                <h3>Test</h3>
+                                <img src="assets/images/4.png">
+                            </div>
+                            <p>
+                                With a rigorous approach we test everything we make to guarantee successful
+                                results.
+                            </p>
+                        </div>
+                        <div class="column is-4">
+                            <div class="itemPr">
+                                <h3>Deliver</h3>
+                                <img src="assets/images/5.png">
+                            </div>
+                            <p>
+                                We ensure the delivery and publication of your product or brand identity, always
+                                aligned with the strategy and your necessities.
+                            </p>
+                        </div>
+                        <div class="column is-4">
+                            <div class="itemPr">
+                                <h3>Follow</h3>
+                                <img src="assets/images/6.png">
+                            </div>
+                            <p>
+                                We will be there for you. We want to know how our tools enhanced the relation
+                                with
+                                your clients.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -186,9 +185,13 @@
                                     to
                                     align the new website with the social media counterpart, in order to enhance our
                                     client´s digital interactions with his followers.
+                                    <br>
+                                    Requested by: Planika Agency
                                 </p>
                                 <div class="btn-launch-guido">
-                                    <button class="btn">launch</button>
+                                    <button class="btn">
+                                        <a href="https://www.guidomcarrillo.com/" target="_blank">launch</a>
+                                    </button>
                                     <div class="down"></div>
                                     <div class="right"></div>
                                 </div>
@@ -214,9 +217,43 @@
                                     them stand out. We designed and implemented the new brand within a new website and
                                     added
                                     new features and animations in the process.
+                                    <br>
+                                    Requested by: Planika Agency
                                 </p>
                                 <div class="btn-launch-sky">
-                                    <button class="btn">launch</button>
+                                    <button class="btn">
+                                        <a href="https://skyhawksec.com/" target="_blank">launch</a>
+                                    </button>
+                                    <div class="down"></div>
+                                    <div class="right"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="column is-1"></div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="slide wk-ga" data-anchor="ga">
+                <div class="container worksCont">
+                    <div class="columns is-vcentered ">
+                        <div class="column  is-9 is-offset-1 ">
+                            <img src="assets/images/ga-Portada.jpg">
+                        </div>
+                        <div class="column is-2">
+                            <div class="workInfo">
+                                <h2>g<i>A</i> Sustainability</h2>
+                                <h3>Website</h3>
+                                <p>
+                                    We faced the challenge of carrying out the creation of the 2018 gA sustainability
+                                    report. We were responsible for converting their design into code and making
+                                    everything functional, fast and smooth.
+                                    <br>
+                                    Requested by: Planika Agency
+                                </p>
+                                <div class="btn-launch-sky">
+                                    <button class="btn">
+                                        <a href="http://www.gasustainable.com/en/" target="_blank">launch</a>
+                                    </button>
                                     <div class="down"></div>
                                     <div class="right"></div>
                                 </div>
@@ -228,9 +265,9 @@
             </div>
         </section>
         <section class="page">
-            <div class="container">
-                <div class="columns is-variable is-8 is-vcentered">
-                    <div class="column is-4 is-offset-1 leftContact">
+            <div class="columns is-gapless contact-us">
+                <div class="column is-6 is-fullheight leftContact">
+                    <div class="wrpContactA">
                         <div class="field">
                             <label class="label">Name</label>
                             <p class="control">
@@ -238,13 +275,13 @@
                             </p>
                         </div>
                         <div class="twoFields">
-                            <div class="field">
+                            <div class="field A">
                                 <label class="label">Phone</label>
                                 <p class="control">
                                     <input class="input" type="text" placeholder="Text input">
                                 </p>
                             </div>
-                            <div class="field">
+                            <div class="field B">
                                 <label class="label">Email</label>
                                 <p class="control has-icon has-icon-right">
                                     <input class="input" type="text" placeholder="Hello@">
@@ -256,7 +293,7 @@
                             </div>
                         </div>
                         <div class="twoFields">
-                            <div class="field">
+                            <div class="field A">
                                 <label class="label">Project type</label>
                                 <p class="control has-icon has-icon-right is-expanded">
                                     <span class="select">
@@ -271,7 +308,7 @@
                                     </span>
                                 </p>
                             </div>
-                            <div class="field">
+                            <div class="field B">
                                 <label class="label">Time to market</label>
                                 <div class="control wrpRadioBtn">
                                     <input type="radio" name="ttm" id="1" value="3wk" />
@@ -302,8 +339,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="column is-2"></div>
-                    <div class="column is-5 rightContact">
+                </div>
+                <div class="column is-6 is-fullheight rightContact">
+                    <div class="wrpContactB">
                         <h1 class="titleContact">Let´s work together</h1>
                         <div class="p-b-md">
                             <h3>Call us,</h3>
@@ -315,17 +353,17 @@
                         </div>
                         <footer>
                             <a href="http://qr.afip.gob.ar/?qr=CruQ_DhU5lHiV8ROWJ4HUQ,," target="_F960AFIPInfo">
-                                <!--SE CAYO LA AFIP <img src="http://www.afip.gob.ar/images/f960/DATAWEB.jpg" border="0"> -->
+                                <img src="assets/images/afip.jpg" border="0">
                             </a>
                             <ul>
                                 <li>
-                                    <a href="">SERVICE</a>
+                                    <a href="#services">SERVICE</a>
                                 </li>
                                 <li>
-                                    <a href="">ABOUT US</a>
+                                    <a href="#about">ABOUT US</a>
                                 </li>
                                 <li>
-                                    <a href="">WORK</a>
+                                    <a href="#works">WORK</a>
                                 </li>
                             </ul>
                             <div class="vl"></div>
@@ -341,29 +379,41 @@
                     </div>
                 </div>
             </div>
-            <!-- background divided -->
-            <div class="columns is-gapless has-text-centered bgContacto">
-                <div class="column is-fullheight bg-contact">
-                </div>
-                <div class="column is-fullheight bg-contact-r">
-                </div>
-            </div>
         </section>
-
     </div>
     <!-- END MAIN CONTENT  -->
 
-    <!-- BRAND ICON -->
-    <div class="brandIcon">
-        <a>
-            <img src="assets/images/logoW.png" alt="Plus Collective Logo">
-        </a>
-    </div>
     <!-- MENU -->
+    <!-- Float -->
+    <div id='wrp-float-menu'>
+        <ul id="float-menu">
+            <li data-menuanchor="home" class="active"><a href="#home">ABOUT</a></li>
+            <li data-menuanchor="about"><a href="#about">TEAM - PROCESS</a></li>
+            <li data-menuanchor="works"><a href="#works">WORKS</a>
+                <ul class="linesWork">
+                    <li data-menuanchor="guido">
+                        <a href="#works/guido">
+                            <hr>
+                        </a>
+                    </li>
+                    <li data-menuanchor="skyhawk">
+                        <a href="#works/skyhawk">
+                            <hr>
+                        </a>
+                    </li>
+                    <li data-menuanchor="ga">
+                        <a href="#works/ga">
+                            <hr>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li data-menuanchor="contact"><a href="#contact">CONTACT</a></li>
+        </ul>
+    </div>
     <!-- Icon -->
     <div class="hamburger hamburger--steps">
-        <div class="hamburger__line"></div>
-        <div class="hamburger__line"></div>
+        <img src="assets/images/menu.png">
     </div>
     <!-- Overlay -->
     <div class="menu-overlay menu-overlay-contentpush">
@@ -379,7 +429,7 @@
                                     <div class="right"></div>
                                 </div>
                                 <li><a class="navLinks" data-destiny="services">Services</a></li>
-                                <li><a class="navLinks" data-destiny="about" href="/aboutA.html">Us</a></li>
+                                <li><a class="navLinks" data-destiny="about" href="/about.html">Us</a></li>
                                 <li><a class="navLinks" data-destiny="works">Works</a></li>
                                 <li>
                                     <hr class="lineMenu">
@@ -398,9 +448,24 @@
                             <a href="mailto:us@pluscollective.io">us@pluscollective.io</a>
                         </div>
                         <div class="langMenu">
-                            <div class="itemLang"><a src="#">español</a></div>
-                            <div class="itemLang"><a src="#">english</a></div>
-                            <div class="itemLang"><a src="#">Dutch</a></div>
+                            <div class="itemLang">
+                                <a src="#">
+                                    <img src="assets/images/b-es.png">
+                                    español
+                                </a>
+                            </div>
+                            <div class="itemLang">
+                                <a src="#">
+                                    <img src="assets/images/b-en.png">
+                                    english
+                                </a>
+                            </div>
+                            <div class="itemLang">
+                                <a src="#">
+                                    <img src="assets/images/b-nl.png">
+                                    Dutch
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -408,9 +473,10 @@
         </div>
     </div>
     <!-- END MENU -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
     <script src="js/home.js"></script>
-    <script src="js/fp-about-a.js"></script>
+    <script src="js/fp-about.js"></script>
 </body>
 
 </html>

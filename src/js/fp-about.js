@@ -11,12 +11,9 @@ new fullpage('#fullpage', {
     sectionSelector: '.page',
 
     //Navigation
-	menu: '#menu',
+	menu: '#float-menu',
 	lockAnchors: false,
-	anchors:['home','works','contact'],
-	navigation: true,
-	navigationPosition: 'right',
-	navigationTooltips: ['Home','Works','Contact'],
+	anchors:['home','about','works','contact'],
     showActiveTooltip: false,
 
     //Accessibility

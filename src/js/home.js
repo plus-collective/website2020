@@ -95,8 +95,8 @@ var usMenu = function (){
 			btnTeam.parentNode.classList.toggle('itemMenuSelected');
 			btnProcess.parentNode.classList.toggle('itemMenuSelected');
 
-			process.classList.toggle('visible');
-			team.classList.toggle('visible');
+			process.classList.toggle('active');
+			team.classList.toggle('active');
 			aux = e.srcElement.parentNode.id
 		} 
 	}
@@ -105,8 +105,8 @@ var usMenu = function (){
 			btnTeam.parentNode.classList.toggle('itemMenuSelected');
 			btnProcess.parentNode.classList.toggle('itemMenuSelected');
 
-			process.classList.toggle('visible');	
-			team.classList.toggle('visible');
+			process.classList.toggle('active');	
+			team.classList.toggle('active');
 			aux = e.srcElement.parentNode.id
 		}
 	}
@@ -122,7 +122,6 @@ var pageLoader = function( action , time, path) {
         pageLoader.style.top = window.scrollY +'px';
     } else if (action === "open"){
 		pageLoader.classList.add('page-loader-open');
-		console.log("ACAAA4");
         setTimeout(function () {
 			window.location.href = path;
         }, time);
@@ -141,14 +140,11 @@ var exitHome = function() {
 
 //SALIR DEL HOME CON EL EFECTO CORTINA
 var goToAbout = function() {
-	console.log("ACAAA");
 	var hereBtn = document.querySelector(".usHomeLeft button" );
 	if(hereBtn !== null){
-		console.log("ACAAA2");
 		hereBtn.onclick = function (e) {
 			e.preventDefault();
-			pageLoader("open",500, "/aboutB.html");
-			console.log("ACAAA3");
+			pageLoader("open",500, "/about.html#about");
 		}
 	}
 };

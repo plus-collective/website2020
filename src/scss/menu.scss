@@ -78,22 +78,23 @@
 #float-menu {
   position: fixed;
   z-index: 600;
-  top: 100px;
+  top: 90px;
   right: 30px;
   text-align: left;
-  width: 80px;
+  width: 150px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  font-size: 0.8em;
+  font-size: 0.6em;
   font-weight: 900;
   letter-spacing: 0.2em;
 
   & li {
     float: left;
+    padding-bottom: 0.2em;
     & a {
       transition: all 0.2s ease-in-out;
-      color: #e2e1cf;
+      color: rgba(0, 0, 0, 0.5);
       &:hover {
         color: white;
       }
@@ -112,7 +113,7 @@
     }
     & li:first-child a hr {
       background-color: whitesmoke;
-      width: 20px;
+      width: 25px;
     }
   }
 
@@ -128,14 +129,16 @@
     }
 
     & hr {
-      height: 3px;
+      height: 2px;
       //color: white;
       background-color: rgba(0, 0, 0, 0.2);
-      width: 10px;
+      width: 15px;
       margin: 0.6em 5px;
+      transition: all 0.2s ease-in-out;
 
       &:hover {
         background-color: white;
+        width: 25px;
       }
     }
   }
@@ -218,6 +221,7 @@
   display: flex;
   flex-direction: row;
   position: relative;
+  height: 100px;
   top: 85px;
   font-family: "Bebas Neue";
 
@@ -225,17 +229,29 @@
     font-size: 1.2em;
     font-weight: 900;
     padding-right: 20px;
+
+    &:hover img {
+      width: 65px;
+    }
   }
 
-  & .itemLang a {
+  & a {
     -webkit-transition: color 0.2s;
     transition: color 0.2s;
     color: #3e5873;
     letter-spacing: 0.1em;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
   }
 
-  & .itemLang a:hover {
+  & a:hover {
     color: white;
+  }
+  & img {
+    width: 2.5em;
+    padding-bottom: 0.5em;
+    transition: all 0.2s ease-in-out;
   }
 }
 
