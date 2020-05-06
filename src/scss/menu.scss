@@ -8,7 +8,6 @@
   & img {
     height: 50px;
     transition: all 0.2s ease-out;
-    opacity: 0.8;
     &:hover {
       cursor: pointer;
       transform: scale(1.1);
@@ -96,23 +95,23 @@
       transition: all 0.2s ease-in-out;
       color: rgba(0, 0, 0, 0.5);
       &:hover {
-        color: white;
+        color: #e2e1cf;
       }
     }
   }
 
   & .active a {
-    color: white;
+    color: #e2e1cf;
   }
 
   // work line changue on active element
   & .active ul {
     display: flex;
     & li a hr {
-      background-color: whitesmoke;
+      background-color: #e2e1cf;
     }
     & li:first-child a hr {
-      background-color: whitesmoke;
+      background-color: #e2e1cf;
       width: 25px;
     }
   }
@@ -231,7 +230,7 @@
     padding-right: 20px;
 
     &:hover img {
-      width: 65px;
+      width: 2.8em;
     }
   }
 

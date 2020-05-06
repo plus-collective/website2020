@@ -49,7 +49,7 @@ var silentNavigation = function(){
 			
 			if(event.target.dataset.destiny === "about"){
 				event.preventDefault();
-				pageLoader("open", 500, "/aboutA.html");
+				pageLoader("open", 500, "/about.html");
 			} else{
 				fullpage_api.silentMoveTo(event.target.dataset.destiny);
 			}
@@ -59,7 +59,7 @@ var silentNavigation = function(){
 		var actualMove = function(event) {
 			event.preventDefault();
 			if(event.target.dataset.destiny === "about"){
-				pageLoader("open", 500, "/aboutA.html");
+				pageLoader("open", 500, "/about.html");
 			} else{
 				pageLoader("open", 500, "/#"+event.target.dataset.destiny);
 			}

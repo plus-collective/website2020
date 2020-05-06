@@ -63,7 +63,6 @@ a {
 
   & img {
     height: 60px;
-    opacity: 0.8;
     transition: all 0.2s ease-out;
     &:hover {
       cursor: pointer;
@@ -72,7 +71,7 @@ a {
   }
   @include mobile {
     top: 20px;
-    right: 20px;
+    left: 20px;
   }
 }
 
@@ -83,7 +82,7 @@ a {
 }
 
 .titleHome {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   // @extend .is-size-2;
   font-family: "CircularStdBook";
   color: #17283a;
@@ -278,10 +277,17 @@ a {
       }
     }
   }
+
   & .itemPr {
     display: flex;
     flex-direction: row;
     position: relative;
+
+    & h3 {
+      font-weight: 900;
+    }
+
+    font-weight: 900;
 
     & img {
       position: absolute;
@@ -496,6 +502,9 @@ a {
   align-items: center;
 
   & .wrpContactA {
+    width: 80%;
+    padding: 0 10%;
+
     & label {
       font-size: 1rem;
       color: #17283a;
@@ -509,6 +518,7 @@ a {
       box-shadow: none;
       font-family: Akkurat;
       color: #17283a;
+      padding-left: 0px;
 
       &:hover {
         border-color: #3e9c8f;
@@ -548,6 +558,7 @@ a {
           font-family: Akkurat;
           color: #17283a;
           width: 100%;
+          padding-left: 0px;
         }
       }
 
@@ -557,7 +568,7 @@ a {
         flex-direction: row;
         align-items: center;
         border-bottom: 1px solid #3e9c8f;
-        padding-left: calc(0.75em - 1px);
+        padding-left: 0px;
 
         & .radio {
           justify-content: center;
@@ -618,6 +629,7 @@ a {
       color: #17283a;
       resize: none;
       min-height: 6em !important;
+      padding-left: 0px;
 
       &:hover {
         border-color: #3e9c8f;
@@ -646,6 +658,7 @@ a {
       /* Chrome, Firefox, Opera, Safari 10.1+ */
       color: #3e9c8f;
       opacity: 1; /* Firefox */
+      padding-left: 0px;
     }
 
     :-ms-input-placeholder {
