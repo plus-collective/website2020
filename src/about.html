@@ -22,7 +22,7 @@
 
 <body>
     <!-- PAGE LOADER -->
-    <div class="page-loader ">
+    <div class="page-loader page-loader-close">
         <img src="assets/images/load1.png">
         <!-- /loader -->
     </div>
@@ -41,9 +41,7 @@
                 <div class="columns is-gapless ">
                     <div class="column is-fullheight is-half">
                         <div class="container is-fluid">
-                            <svg class="illUs">
-                                <use href="assets/svg/us.svg">
-                            </svg>
+                            <div class="illUs"></div>
                         </div>
                     </div>
                     <div class="column is-fullheight is-half">
@@ -95,9 +93,11 @@
                             </div>
                         </div>
                         <div class="column illusTeam">
-                            <svg>
+                            <div class="illusTeam"></div>
+
+                            <!-- <svg>
                                 <use href="assets/svg/ep.svg">
-                            </svg>
+                            </svg> -->
                         </div>
                     </div>
                 </div>
@@ -388,7 +388,7 @@
     <div id='wrp-float-menu'>
         <ul id="float-menu">
             <li data-menuanchor="home" class="active"><a href="#home">ABOUT</a></li>
-            <li data-menuanchor="about"><a href="#about">TEAM - PROCESS</a></li>
+            <li data-menuanchor="tp"><a href="#tp">TEAM - PROCESS</a></li>
             <li data-menuanchor="works"><a href="#works">WORKS</a>
                 <ul class="linesWork">
                     <li data-menuanchor="guido">

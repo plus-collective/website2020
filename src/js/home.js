@@ -1,11 +1,57 @@
 import fullpage from 'fullpage.js';
+import lottie from 'lottie-web';
 
 window.onload = function(){ 
-    pageLoader("close", 500);
+	// pageLoader("close", 500);
+	transitionFix();
     menu();
     goToAbout();
 	exitHome();
-    usMenu();
+	usMenu();
+	
+	animations();
+}
+
+
+var animations = function (){
+
+	var illustrationHome = document.querySelector("div.illHome");
+	var illustrationUs = document.querySelector("div.illUs");
+	var illustrationEP = document.querySelector("div.illusTeam");
+
+
+	lottie.loadAnimation({
+		container: illustrationHome, 
+		renderer: 'svg',
+		loop: true,
+		autoplay: true,
+		path: require('../assets/animations/home.json')
+	  });
+
+	  lottie.loadAnimation({
+		container: illustrationUs, 
+		renderer: 'svg',
+		loop: true,
+		autoplay: true,
+		path: require('../assets/animations/us.json') 
+	  });
+
+	  lottie.loadAnimation({
+		container: illustrationEP, 
+		renderer: 'svg',
+		loop: true,
+		autoplay: true,
+		path: require('../assets/animations/EP.json') 
+	  });
+
+}
+
+
+// -- Fix for transition between Home and About#TP--//
+var transitionFix = function(){
+	if (window.location.href.includes("#about")){
+		fullpage_api.silentMoveTo(2);
+	}
 }
 
 // -- START Menu functionality --- //
@@ -15,7 +61,7 @@ var menu = function() {
 		hamburgerBttn = document.querySelector( 'div.hamburger' ),
         overlay = document.querySelector( 'div.menu-overlay' ),
         link = document.querySelector('ul.linkList'),
-		transEndEventName = 'transitionend',
+		transEndEventName = 'transitionend';
 
 	toggleMenuOverlay = function () {
 		if( overlay.classList.contains('open') ) {
@@ -49,7 +95,8 @@ var silentNavigation = function(){
 			
 			if(event.target.dataset.destiny === "about"){
 				event.preventDefault();
-				pageLoader("open", 500, "/about.html");
+				window.location.href = "/about.html";
+				// pageLoader("open", 500, "/about.html");
 			} else{
 				fullpage_api.silentMoveTo(event.target.dataset.destiny);
 			}
@@ -59,9 +106,11 @@ var silentNavigation = function(){
 		var actualMove = function(event) {
 			event.preventDefault();
 			if(event.target.dataset.destiny === "about"){
-				pageLoader("open", 500, "/about.html");
+				window.location.href = "/about.html";
+				// pageLoader("open", 500, "/about.html");
 			} else{
-				pageLoader("open", 500, "/#"+event.target.dataset.destiny);
+				window.location.href = "/#"+event.target.dataset.destiny;
+				// pageLoader("open", 500, "/#"+event.target.dataset.destiny);
 			}
 			
 		};
@@ -133,8 +182,9 @@ var pageLoader = function( action , time, path) {
 var exitHome = function() {
 	var linkHome = document.querySelector(".brandIcon img");
     linkHome.onclick = function (e) {
-        e.preventDefault();
-        pageLoader("open", 500, "/");
+		e.preventDefault();
+		window.location.href = "/"
+        // pageLoader("open", 500, "/");
     }
 };
 
@@ -144,7 +194,8 @@ var goToAbout = function() {
 	if(hereBtn !== null){
 		hereBtn.onclick = function (e) {
 			e.preventDefault();
-			pageLoader("open",500, "/about.html#about");
+			window.location.href = "/about.html#about";
+			// pageLoader("open",500, "/about.html#about");
 		}
 	}
 };

@@ -21,8 +21,10 @@
   "dependencies": {
     "bulma": "^0.8.1",
     "fullpage.js": "^3.0.8",
+    "lottie-web": "^5.6.10",
     "normalize-scss": "^7.0.1",
     "parcel-plugin-imagemin": "^4.0.1",
+    "parcel-plugin-json-url-loader": "^0.1.2",
     "parcel-plugin-svg-sprite": "^1.4.1"
   }
 }
