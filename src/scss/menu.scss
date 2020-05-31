@@ -14,63 +14,29 @@
     }
   }
 
+  & .mC {
+    display: none;
+  }
+
+  & .mO {
+    display: block;
+  }
+
   @include mobile {
     top: 20px;
     right: 20px;
   }
 }
 
-.hamburger__line {
-  content: " ";
-  display: block;
-  width: 50%;
-  margin: auto;
-  height: 0.2em;
-  background: black;
-  opacity: 0.3;
-  border-radius: 0.5em;
-  margin-bottom: 0.5em;
-
-  &:first-child {
-    margin-top: 1.1em;
-  }
-}
-
-.hamburger--steps {
-  & .hamburger__line {
-    transition: width 0.3s ease-out;
-  }
-  &:hover .hamburger__line {
-    width: 60%;
-  }
-}
-
 .hamburger--active {
   background-color: transparent;
-
-  &.hamburger--steps .hamburger__line {
-    transition: none;
-    width: 80%;
+  & .mC {
+    display: block;
   }
 
-  & .hamburger__line {
-    position: absolute;
-    margin: auto;
-    background-color: white;
-    opacity: 0.6;
-
-    &:first-child {
-      transform: translate(0%, 1.8em) rotate(-45deg);
-    }
-
-    &:last-child {
-      transform: translate(0%, 1.8em) rotate(45deg);
-    }
+  & .mO {
+    display: none;
   }
-
-  // & img:first-child {
-  //   //display: none;
-  // }
 }
 
 /* Floating Menu*/
@@ -106,13 +72,11 @@
 
   // work line changue on active element
   & .active ul {
-    display: flex;
     & li a hr {
       background-color: #e2e1cf;
     }
-    & li:first-child a hr {
-      background-color: #e2e1cf;
-      width: 25px;
+    &.linesWork {
+      display: flex;
     }
   }
 
@@ -130,7 +94,7 @@
     & hr {
       height: 2px;
       //color: white;
-      background-color: rgba(0, 0, 0, 0.2);
+      // background-color: rgba(0, 0, 0, 0.2);
       width: 15px;
       margin: 0.6em 5px;
       transition: all 0.2s ease-in-out;
@@ -140,6 +104,38 @@
         width: 25px;
       }
     }
+  }
+}
+
+//Extension de la barra en el menu flotante para cada trabajo
+.fp-viewing-works-guido .hrGu {
+  width: 25px !important;
+}
+.fp-viewing-works-skyhawk .hrSk {
+  width: 25px !important;
+}
+.fp-viewing-works-ga .hrGa {
+  width: 25px !important;
+}
+.fp-viewing-works-more .hrMo {
+  width: 25px !important;
+}
+
+.fp-viewing-tp-0 {
+  #float-menu li:first-child a {
+    color: #e2e1cf;
+  }
+  .hrT {
+    width: 25px !important;
+  }
+}
+
+.fp-viewing-tp-1 {
+  #float-menu li:first-child a {
+    color: #e2e1cf;
+  }
+  .hrP {
+    width: 25px !important;
   }
 }
 

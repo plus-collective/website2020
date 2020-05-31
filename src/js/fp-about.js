@@ -18,7 +18,7 @@ new fullpage('#fullpage', {
     //Navigation
 	menu: '#float-menu',
 	lockAnchors: false,
-	anchors:['home','about','works','contact'],
+	anchors:['home','tp','works','contact'],
     showActiveTooltip: false,
     controlArrows: false,
 

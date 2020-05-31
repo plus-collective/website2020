@@ -133,7 +133,7 @@ a {
   height: 60vh;
 }
 
-.usHomeLeft {
+.usHomeRight {
   & h1 {
     @extend .is-size-3, .m-b-md;
     font-family: "CircularStdBook";
@@ -143,9 +143,8 @@ a {
 
   & p {
     @extend .is-size-5, .m-b-lg;
-    font-family: "Montserrat";
     color: #17283a;
-    font-weight: 400;
+    font-weight: 100;
   }
 
   & .btn-us-home {
@@ -168,20 +167,32 @@ a {
 
   & .wrpMenuUs {
     padding-left: 33.333%;
+    height: 40vh;
+    width: 90%;
+
+    & .wrpLinkUs {
+      height: 80%;
+    }
   }
 
   & .itemMenuSelected {
-    @extend .is-size-2;
+    @extend .is-size-3;
+
+    & a {
+      // background-color: #fac903;
+      border-bottom: 4px solid #fac903;
+    }
   }
   & .itemMenu {
     @extend .p-b-lg;
-    font-size: 1.5rem;
+    @extend .is-size-3;
     font-family: CircularStdBook;
     font-weight: 600;
     color: #17283a;
 
     & a {
       color: #17283a;
+      padding: 0px 10px 0 0px;
     }
   }
   & .btn-about-us {
@@ -304,14 +315,14 @@ a {
     // background-color: grey;
     height: 72vh;
     padding: 0px;
-    & img {
+    & video {
       height: 100%;
       width: 100%;
       object-fit: cover;
+      object-position: top;
     }
   }
   & .column:nth-child(2) {
-    // background-color: black;
     position: relative;
 
     & .workInfo {
@@ -321,7 +332,6 @@ a {
       width: 300px;
       background-color: #e2e1cf;
       padding: 2em;
-      // box-shadow: -25px 25px 0px 0px #1c3562;
 
       & h2 {
         font-size: 1.5em;
@@ -410,6 +420,37 @@ a {
   }
 }
 
+.wk-more {
+  background-color: #502e3f;
+  & h2 {
+    text-align: center;
+    color: #fcb410;
+    @extend .is-size-3, .m-lg;
+    font-weight: 900;
+  }
+  & .columns .column {
+    text-align: center;
+  }
+
+  & .imgWrp {
+    height: 15vh;
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    padding: 0px 50px;
+    margin: 50px 0px;
+    & img {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  }
+
+  & .column.is-1 {
+    width: 12.5% !important;
+  }
+}
+
 //CONTACT
 
 .rightContact {
@@ -467,9 +508,6 @@ a {
         margin-left: auto;
         margin-right: auto;
         display: block;
-        -webkit-filter: grayscale(100%);
-        filter: grayscale(100%);
-        opacity: 8;
       }
 
       & .vl {
@@ -669,6 +707,39 @@ a {
     ::-ms-input-placeholder {
       /* Microsoft Edge */
       color: #3e9c8f;
+    }
+  }
+}
+
+// 404
+
+.fof {
+  background-color: #5ac7a8;
+  width: 100%;
+  overflow: hidden;
+
+  & .illFof {
+    width: 100%;
+    height: 30vh;
+  }
+
+  & .title {
+    @extend .is-size-3;
+    color: #17283a;
+    font-weight: 900;
+  }
+
+  & .subtitle {
+    @extend .is-size-2;
+    font-family: "CrimsonTextReg";
+    color: #8de2ca;
+    font-weight: 900;
+  }
+
+  & .btn-fof {
+    @include my-box-btn(120px, 40px, #fcb410, #5ac7a8, #502e3f, 6px, false);
+    & a {
+      color: #502e3f;
     }
   }
 }

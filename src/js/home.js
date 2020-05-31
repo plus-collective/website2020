@@ -1,18 +1,16 @@
-import fullpage from 'fullpage.js';
 import lottie from 'lottie-web';
 
 window.onload = function(){ 
-	// pageLoader("close", 500);
-	transitionFix();
-    menu();
-    goToAbout();
-	exitHome();
-	usMenu();
-	
+	// pageLoader("close", 100);
 	animations();
+	menu();
+	transitionFix();
+    goHome();
+	// exitHome();
+
 }
 
-
+// -- Load lottie animations --//
 var animations = function (){
 
 	var illustrationHome = document.querySelector("div.illHome");
@@ -26,32 +24,24 @@ var animations = function (){
 		loop: true,
 		autoplay: true,
 		path: require('../assets/animations/home.json')
-	  });
+	});
 
-	  lottie.loadAnimation({
+	lottie.loadAnimation({
 		container: illustrationUs, 
 		renderer: 'svg',
 		loop: true,
 		autoplay: true,
 		path: require('../assets/animations/us.json') 
-	  });
+	});
 
-	  lottie.loadAnimation({
+	lottie.loadAnimation({
 		container: illustrationEP, 
 		renderer: 'svg',
 		loop: true,
 		autoplay: true,
 		path: require('../assets/animations/EP.json') 
-	  });
+	});
 
-}
-
-
-// -- Fix for transition between Home and About#TP--//
-var transitionFix = function(){
-	if (window.location.href.includes("#about")){
-		fullpage_api.silentMoveTo(2);
-	}
 }
 
 // -- START Menu functionality --- //
@@ -63,7 +53,7 @@ var menu = function() {
         link = document.querySelector('ul.linkList'),
 		transEndEventName = 'transitionend';
 
-	toggleMenuOverlay = function () {
+	var toggleMenuOverlay = function () {
 		if( overlay.classList.contains('open') ) {
             overlay.classList.remove('open');
 			container.classList.remove('menu-overlay-open');
@@ -81,27 +71,14 @@ var menu = function() {
 	};
 	silentNavigation();
 	hamburgerBttn.addEventListener( 'click', toggleMenuOverlay );
-    link.addEventListener( 'click', toggleMenuOverlay );
+    // link.addEventListener( 'click', toggleMenuOverlay );
 
 };
 
 // Scroll fot menu
 var silentNavigation = function(){
-    var elements = document.getElementsByClassName("navLinks");
-	
-	if( ! window.location.pathname.includes("about")){
-		//at Home
-		var actualMove = function(event) {
-			
-			if(event.target.dataset.destiny === "about"){
-				event.preventDefault();
-				window.location.href = "/about.html";
-				// pageLoader("open", 500, "/about.html");
-			} else{
-				fullpage_api.silentMoveTo(event.target.dataset.destiny);
-			}
-		};
-	} else{
+
+	if( window.location.pathname.includes("about") || window.location.pathname.includes("404")){
 		//att about A or B 
 		var actualMove = function(event) {
 			event.preventDefault();
@@ -114,54 +91,43 @@ var silentNavigation = function(){
 			}
 			
 		};
+	} else {
+		//at Home
+		var actualMove = function(event) {
+			
+			if(event.target.dataset.destiny === "about"){
+				event.preventDefault();
+				window.location.href = "/about.html";
+				// pageLoader("open", 500, "/about.html");
+			} else{
+				// pageLoader("toggle", 500, event.target.dataset.destiny);
+				fullpage_api.silentMoveTo(event.target.dataset.destiny);
+			}
+		};
 	}
-
+	var elements = document.getElementsByClassName("navLinks");
     for (var i = 0; i < elements.length; i++) {
         elements[i].addEventListener('click', actualMove, false);
     }
 };
 
-// PARA PAGINA US
-var usMenu = function (){
-
-	var btnTeam = document.querySelector("#btnTeam a")
-	var btnProcess = document.querySelector("#btnProcess a")
-
-	if(btnTeam === null || btnProcess === null){
-		return ;
+// -- Fix for transition between Home and About#TP--//
+var transitionFix = function(){
+	if (window.location.href.includes("#tp")){
+		fullpage_api.silentMoveTo(2);
 	}
-
-	var team = document.querySelector("div .usTeam");
-	var process = document.querySelector("div .usProcess");
-
-	var aux = null;
-
-	btnTeam.onclick = function (e) {
-		if(aux === null){
-			return;
-		}
-		if (aux != e.srcElement.parentNode.id){
-			btnTeam.parentNode.classList.toggle('itemMenuSelected');
-			btnProcess.parentNode.classList.toggle('itemMenuSelected');
-
-			process.classList.toggle('active');
-			team.classList.toggle('active');
-			aux = e.srcElement.parentNode.id
-		} 
+	if (window.location.href.includes("#services")){
+		fullpage_api.silentMoveTo(2);
 	}
-	btnProcess.onclick = function (e) {
-		if (aux != e.srcElement.parentNode.id){
-			btnTeam.parentNode.classList.toggle('itemMenuSelected');
-			btnProcess.parentNode.classList.toggle('itemMenuSelected');
-
-			process.classList.toggle('active');	
-			team.classList.toggle('active');
-			aux = e.srcElement.parentNode.id
-		}
+	if (window.location.href.includes("#contact")){
+		fullpage_api.silentMoveTo(5);
+	}
+	if (window.location.href.includes("#works")){
+		fullpage_api.silentMoveTo(4);
 	}
 }
 
-// -- START Page loader --//
+//-- START Page loader --//
 var pageLoader = function( action , time, path) {
     let pageLoader = document.querySelector( 'div.page-loader' );
     if (action === "close"){
@@ -170,22 +136,28 @@ var pageLoader = function( action , time, path) {
         }, time);
         pageLoader.style.top = window.scrollY +'px';
     } else if (action === "open"){
-		pageLoader.classList.add('page-loader-open');
+		pageLoader.classList.remove('page-loader-close');
         setTimeout(function () {
 			window.location.href = path;
         }, time);
-        
+    } else if (action === "toggle"){
+		pageLoader.classList.remove('page-loader-close');
+        setTimeout(function () {
+			fullpage_api.silentMoveTo(path);
+			console.log("hgola");
+			pageLoader.classList.add('page-loader-close');
+        }, time);
     } 
 };
 
 //Ir al Home con efecto
-var exitHome = function() {
+var goHome = function() {
 	var linkHome = document.querySelector(".brandIcon img");
-    linkHome.onclick = function (e) {
+	linkHome.onclick = function (e) {
 		e.preventDefault();
 		window.location.href = "/"
-        // pageLoader("open", 500, "/");
-    }
+		// pageLoader("open", 500, "/");
+	}
 };
 
 //SALIR DEL HOME CON EL EFECTO CORTINA
