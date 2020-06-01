@@ -8,10 +8,9 @@
     <!-- android chrome color -->
     <meta name="theme-color" content="#5ac7a8" />
     <!-- favicon  99% -->
-    <!-- <link rel="icon" type="image/png" sizes="48x48" href="assets/images/icon.png"> -->
-    <link rel="shortcut icon" type="image/png" href="assets/images/icon.png">
-    <link rel="shortcut icon" sizes="192x192" href="assets/images/icon.png">
-    <link rel="apple-touch-icon" href="assets/images/icon.png">
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.jpg">
+    <link rel="shortcut icon" sizes="192x192" href="assets/images/favicon.jpg">
+    <link rel="apple-touch-icon" href="assets/images/favicon.jpg">
 
     <title>Plus Collective | Digital comunication tools</title>
     <meta name=”description” content=”We are a studio specialized in creating digital tools that will help you pursue
@@ -39,7 +38,7 @@
 
     <!-- MENU -->
     <!-- Float -->
-    <div id='wrp-float-menu'>
+    <div id='wrp-float-menu' class="is-hidden-mobile">
         <ul id="float-menu">
             <li data-menuanchor="home" class="active"><a href="#home">ABOUT</a></li>
             <li data-menuanchor="tp">
@@ -90,13 +89,13 @@
     </div>
     <!-- Overlay -->
     <div class="menu-overlay menu-overlay-contentpush">
-        <div class="container has-text-centered">
+        <div class="container">
             <div class="columns is-gapless ">
                 <div class="column is-fullheight is-half">
-                    <div class="container is-fluid  ">
+                    <div class="container">
                         <nav>
                             <ul class='linkList'>
-                                <div class="btn-home-menu navLinks">
+                                <div class="btn-home-menu navLinks is-hidden-mobile">
                                     <button class="btn"><a data-destiny="home">Home</a></button>
                                     <div class="down"></div>
                                     <div class="right"></div>
@@ -108,12 +107,17 @@
                                     <hr class="lineMenu">
                                 </li>
                                 <li><a class="navLinks" data-destiny="contact">Contact</a></li>
+                                <div class="btn-home-menu navLinks is-hidden-tablet">
+                                    <button class="btn"><a data-destiny="home">Home</a></button>
+                                    <div class="down"></div>
+                                    <div class="right"></div>
+                                </div>
                             </ul>
                         </nav>
                     </div>
                 </div>
                 <div class="column is-fullheight is-half">
-                    <div class="container is-fluid has-text-left">
+                    <div class="container has-text-left">
                         <div class="menuContact">
                             <h3>Phone</h3>
                             <a href="tel:+5411933873000">+ 54 9 11 3350 5000</a>
@@ -123,19 +127,19 @@
                         <div class="langMenu">
                             <div class="itemLang">
                                 <a src="#">
-                                    <img src="assets/images/b-es.png">
+                                    <img src="assets/images/b-es.png" alt="Spanish Flag" class=" is-hidden-mobile">
                                     español
                                 </a>
                             </div>
                             <div class="itemLang">
                                 <a src="#">
-                                    <img src="assets/images/b-en.png">
+                                    <img src="assets/images/b-en.png" alt="English Flag " class=" is-hidden-mobile">
                                     english
                                 </a>
                             </div>
                             <div class="itemLang">
                                 <a src="#">
-                                    <img src="assets/images/b-nl.png">
+                                    <img src="assets/images/b-nl.png" alt="Neerlandes Flag" class=" is-hidden-mobile">
                                     Dutch
                                 </a>
                             </div>
@@ -149,7 +153,7 @@
 
     <!-- MAIN CONTENT  -->
     <div id="fullpage">
-        <section class="page bg-process">
+        <section class="page bg-process page is-hidden-mobile">
             <div class="container has-text-centered">
                 <div class="columns is-gapless ">
                     <div class="column is-fullheight is-half">
@@ -175,7 +179,7 @@
                 </div>
             </div>
         </section>
-        <section class="page">
+        <section class="page is-hidden-mobile">
             <div class="slide sl-team">
                 <div class="columns  is-gapless about-us">
                     <div class="column is-4 is-fullheight usMenu">
@@ -208,12 +212,8 @@
                                     <p>Graphic Design and <br>ideas</p>
                                 </div>
                             </div>
-                            <div class="column illusTeam">
+                            <div class="column">
                                 <div class="illusTeam"></div>
-
-                                <!-- <svg>
-                                    <use href="assets/svg/ep.svg">
-                                </svg> -->
                             </div>
                         </div>
                     </div>
@@ -308,7 +308,102 @@
                 </div>
             </div>
         </section>
-        <section class="page">
+        <section class="is-hidden-tablet">
+            <div class="container bg-contact usMobile">
+                <div class="illusTeam-mob"></div>
+                <div class="container has-text-left ">
+                    <div class="teamName">
+                        <h2 class="titleTeam-mob">Team</h2>
+                        <div class="teamMember">
+                            <h2>EMILIANO GAITÁN</h2>
+                            <p>Development and <br>Communication</p>
+                        </div>
+                        <div class="teamMember">
+                            <h2>PATRICIO BERTACCHINI</h2>
+                            <p>Graphic Design and <br>ideas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container bg-contact-r usMobile">
+                <div class="illusTeam-mob"></div>
+                <div class="container has-text-left ">
+                    <div class="teamName">
+                        <h2 class="titleTeam-mob">Work process</h2>
+                        <div class="columns is-mobile is-multiline">
+                            <div class="column is-6">
+                                <div class="itemPr">
+                                    <img src="assets/images/1.png">
+                                    <h3>Meet</h3>
+                                </div>
+                                <p>
+                                    We have a (virtual) coffee, chat and
+                                    get to
+                                    know you, your project and its necessities
+                                </p>
+                            </div>
+                            <div class="column is-6">
+                                <div class="itemPr">
+                                    <img src="assets/images/2.png">
+                                    <h3>Think</h3>
+                                </div>
+                                <p>
+                                    By brainstorming, exploring and sharing ideas we design a strategy that will
+                                    provide
+                                    the solution you are looking for.
+                                </p>
+                            </div>
+                            <div class="column is-6">
+                                <div class="itemPr">
+                                    <img src="assets/images/3.png">
+                                    <h3>Create</h3>
+                                </div>
+                                <p>
+                                    We bring our ideas to life, giving our best to provide optimal results.
+                                </p>
+                            </div>
+                            <div class="column is-6">
+                                <div class="itemPr">
+                                    <img src="assets/images/4.png">
+                                    <h3>Test</h3>
+                                </div>
+                                <p>
+                                    With a rigorous approach we test everything we make to guarantee successful
+                                    results.
+                                </p>
+                            </div>
+                            <div class="column is-6">
+                                <div class="itemPr">
+                                    <img src="assets/images/5.png">
+                                    <h3>Deliver</h3>
+                                </div>
+                                <p>
+                                    We ensure the delivery and publication of your product or brand identity, always
+                                    aligned with the strategy and your necessities.
+                                </p>
+                            </div>
+                            <div class="column is-6">
+                                <div class="itemPr">
+                                    <img src="assets/images/6.png">
+                                    <h3>Follow</h3>
+                                </div>
+                                <p>
+                                    We will be there for you. We want to know how our tools enhanced the relation
+                                    with
+                                    your clients.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-home-about-mob">
+                    <a href="/"><button class="btn">Home</button></a>
+                    <div class="down"></div>
+                    <div class="right"></div>
+                </div>
+            </div>
+        </section>
+        <section class="page is-hidden-mobile">
             <div class="slide wk-guido" data-anchor="guido">
                 <div class="container worksCont">
                     <div class="columns is-vcentered ">
@@ -420,36 +515,36 @@
                         <div class="column is-3">
                             <div class="imgWrp">
                                 <a rel="noopener" rel="noreferrer" target="_blank" href="http://www.bodyhealth.com.ar/">
-                                    <img src="assets/images/body.png" alt="Body Health Logo">
+                                    <img src="assets/images/clientes/body.png" alt="Body Health Logo">
                                 </a>
                             </div>
                             <div class="imgWrp">
                                 <a rel="noopener" rel="noreferrer" target="_blank" href="http://verocorpo.com.ar/">
-                                    <img src="assets/images/vero.png" alt="Vero Corpo Logo">
+                                    <img src="assets/images/clientes/verocorpo.png" alt="Vero Corpo Logo">
                                 </a>
                             </div>
                         </div>
                         <div class="column is-3">
                             <div class="imgWrp">
                                 <a rel="noopener" rel="noreferrer" target="_blank" href="https://www.itba.edu.ar/">
-                                    <img src="assets/images/itba.png" alt="ITBA Logo">
+                                    <img src="assets/images/clientes/itba.png" alt="ITBA Logo">
                                 </a>
                             </div>
                             <div class="imgWrp">
-                                <a rel="noopener" rel="noreferrer" target="_blank">
-                                    <img src="assets/images/op.png" alt="Open Park Logo">
+                                <a rel="noopener" rel="noreferrer" target="_blank" href="https://www.planika.agency/">
+                                    <img src="assets/images/clientes/planika.png" alt="Planika Agency Logo">
                                 </a>
                             </div>
                         </div>
                         <div class="column is-3">
                             <div class="imgWrp">
                                 <a rel="noopener" rel="noreferrer" target="_blank" href="http://www.apfpasa.ch/">
-                                    <img src="assets/images/pasa.png" alt="PASA Logo">
+                                    <img src="assets/images/clientes/pasa.png" alt="PASA Logo">
                                 </a>
                             </div>
                             <div class="imgWrp">
                                 <a rel="noopener" rel="noreferrer" target="_blank" href="https://el-flamingo.com/">
-                                    <img src="assets/images/flamingo.png" alt="El Flamingo Logo">
+                                    <img src="assets/images/clientes/flaming.png" alt="El Flamingo Logo">
                                 </a>
                             </div>
                         </div>
@@ -458,83 +553,101 @@
                 </div>
             </div>
         </section>
-        <section class="page">
+        <section class="page fp-auto-height-responsive is-hidden-mobile">
             <div class="columns is-gapless contact-us">
                 <div class="column is-6 is-fullheight leftContact">
                     <div class="wrpContactA">
-                        <div class="field">
-                            <label class="label">Name</label>
-                            <p class="control">
-                                <input class="input" type="text" placeholder="Text input">
-                            </p>
-                        </div>
-                        <div class="twoFields">
-                            <div class="field A">
-                                <label class="label">Phone</label>
+                        <h1 class="titleContact is-hidden-tablet">Let´s work<br> together</h1>
+                        <form action="https://formcarry.com/s/JH0tp7wTIpNK" method="POST" accept-charset="UTF-8">
+                            <div class="field">
+                                <label class="label">Name</label>
                                 <p class="control">
-                                    <input class="input" type="text" placeholder="Text input">
+                                    <input class="input" type="text" placeholder="Text input" name="Name">
                                 </p>
                             </div>
-                            <div class="field B">
-                                <label class="label">Email</label>
-                                <p class="control has-icon has-icon-right">
-                                    <input class="input" type="text" placeholder="Hello@">
-                                    <!-- <span class="icon is-small">
+                            <div class="twoFields">
+                                <div class="field A">
+                                    <label class="label">Phone</label>
+                                    <p class="control">
+                                        <input class="input" type="text" placeholder="Text input" name="Phone">
+                                    </p>
+                                </div>
+                                <div class="field B">
+                                    <label class="label">Email</label>
+                                    <p class="control has-icon has-icon-right">
+                                        <input class="input" type="text" placeholder="Hello@" name="Email">
+                                        <!-- <span class="icon is-small">
                                     <i class="fa fa-warning"></i>
                                 </span> -->
-                                </p>
-                                <!-- <p class="help is-danger">This email is invalid</p> -->
-                            </div>
-                        </div>
-                        <div class="twoFields">
-                            <div class="field A">
-                                <label class="label">Project type</label>
-                                <p class="control has-icon has-icon-right is-expanded">
-                                    <span class="select">
-                                        <select>
-                                            <option>Web</option>
-                                            <option>Mobile</option>
-                                            <option>Brand Identity</option>
-                                            <option>UI/UX</option>
-                                            <option>Consultancy</option>
-                                            vv <option>Custom</option>
-                                        </select>
-                                    </span>
-                                </p>
-                            </div>
-                            <div class="field B">
-                                <label class="label">Time to market</label>
-                                <div class="control wrpRadioBtn">
-                                    <input type="radio" name="ttm" id="1" value="3wk" />
-                                    <label for="1">3Wk</label>
-
-                                    <input type="radio" name="ttm" id="2" value="3mo" />
-                                    <label for="2">4Mo</label>
-
-                                    <input type="radio" name="ttm" id="3" value="more" />
-                                    <label for="3">More</label>
-
+                                    </p>
+                                    <!-- <p class="help is-danger">This email is invalid</p> -->
                                 </div>
                             </div>
-                        </div>
-                        <div class="field">
-                            <label class="label">Message</label>
-                            <p class="control">
-                                <textarea class="textarea" placeholder="Textarea"></textarea>
+                            <div class="twoFields is-hidden-mobile">
+                                <div class="field A">
+                                    <label class="label">Project type</label>
+                                    <p class="control has-icon has-icon-right is-expanded">
+                                        <span class="select">
+                                            <select>
+                                                <option>Web</option>
+                                                <option>Mobile</option>
+                                                <option>Brand Identity</option>
+                                                <option>UI/UX</option>
+                                                <option>Consultancy</option>
+                                                <option>Custom</option>
+                                            </select>
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="field B">
+                                    <label class="label">Time to market</label>
+                                    <div class="control wrpRadioBtn">
+                                        <input type="radio" name="Tt-market" id="1" value="3wk" />
+                                        <label for="1">3Wk</label>
+
+                                        <input type="radio" name="Tt-market" id="2" value="3mo" />
+                                        <label for="2">4Mo</label>
+
+                                        <input type="radio" name="Tt-market" id="3" value="more" />
+                                        <label for="3">More</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">Message</label>
+                                <p class="control">
+                                    <textarea class="textarea" placeholder="Textarea" name="Message"></textarea>
+                                </p>
+                            </div>
+                            <div class="field is-grouped">
+                                <div class="btn-send-contact">
+                                    <p class="control">
+                                        <button class="btn" type="submit">Send</button>
+                                    </p>
+                                    <div class="down"></div>
+                                    <div class="right"></div>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div class="wrp-contact-mob is-hidden-tablet">
+                            <div class="p-b-xs">
+                                <h3>Call us,</h3>
+                                <a href="tel:+54 11 22558844">+ 54 9 11 3350 5000</a>
+                            </div>
+                            <div class="p-b-lg">
+                                <h3>or maybe an email?</h3>
+                                <a href="mailto:us@pluscollective.io">hello@pluscollective.io</a>
+                            </div>
+                            <p>
+                                Copyright 2020, PLUS COLLECTIVE<br>All rights reserved. Terms & conditions | Privacy
                             </p>
                         </div>
-                        <div class="field is-grouped">
-                            <div class="btn-send-contact">
-                                <p class="control">
-                                    <button class="btn">Send</button>
-                                </p>
-                                <div class="down"></div>
-                                <div class="right"></div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
-                <div class="column is-6 is-fullheight rightContact">
+                <div class="column is-6 is-fullheight rightContact is-hidden-mobile	
+                ">
                     <div class="wrpContactB">
                         <h1 class="titleContact">Let´s work together</h1>
                         <div class="p-b-md">
@@ -543,15 +656,15 @@
                         </div>
                         <div class="p-b-xl">
                             <h3>or maybe an email?</h3>
-                            <a href="mailto:us@pluscollective.io">hello@plsucollective.io</a>
+                            <a href="mailto:us@pluscollective.io">hello@pluscollective.io</a>
                         </div>
                         <footer>
                             <a href="http://qr.afip.gob.ar/?qr=CruQ_DhU5lHiV8ROWJ4HUQ,," target="_F960AFIPInfo">
-                                <img src="assets/images/afip.jpg" border="0">
+                                <img src="assets/images/afip.jpg" border="0" alt="AFIP link">
                             </a>
                             <ul>
                                 <li>
-                                    <a href="/index.html#services">SERVICE</a>
+                                    <a href="#services">SERVICE</a>
                                 </li>
                                 <li>
                                     <a href="#about">ABOUT US</a>

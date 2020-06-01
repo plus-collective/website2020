@@ -16,7 +16,7 @@ var animations = function (){
 	var illustrationHome = document.querySelector("div.illHome");
 	var illustrationUs = document.querySelector("div.illUs");
 	var illustrationEP = document.querySelector("div.illusTeam");
-
+	var illustrationEPmob = document.querySelector("div.illusTeam-mob");
 
 	lottie.loadAnimation({
 		container: illustrationHome, 
@@ -36,6 +36,14 @@ var animations = function (){
 
 	lottie.loadAnimation({
 		container: illustrationEP, 
+		renderer: 'svg',
+		loop: true,
+		autoplay: true,
+		path: require('../assets/animations/EP.json') 
+	});
+
+	lottie.loadAnimation({
+		container: illustrationEPmob, 
 		renderer: 'svg',
 		loop: true,
 		autoplay: true,
@@ -71,7 +79,7 @@ var menu = function() {
 	};
 	silentNavigation();
 	hamburgerBttn.addEventListener( 'click', toggleMenuOverlay );
-    // link.addEventListener( 'click', toggleMenuOverlay );
+    link.addEventListener( 'click', toggleMenuOverlay );
 
 };
 

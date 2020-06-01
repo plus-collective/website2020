@@ -31,7 +31,7 @@ new fullpage('#fullpage', {
     
 	//Design
 	verticalCentered: true,
-	responsiveWidth: 768,
+	responsiveWidth: 900,
 	responsiveHeight: 0,
     scrollBar:true,
     fixedElements:'.nav-fullscreen, .hamburger .brandIcon',

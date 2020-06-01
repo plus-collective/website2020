@@ -8,10 +8,9 @@
     <!-- android chrome color -->
     <meta name="theme-color" content="#5ac7a8" />
     <!-- Favicon  99% -->
-    <!-- <link rel="icon" type="image/png" sizes="48x48" href="assets/images/icon.png"> -->
-    <link rel="shortcut icon" type="image/png" href="assets/images/icon.png">
-    <link rel="shortcut icon" sizes="192x192" href="assets/images/icon.png">
-    <link rel="apple-touch-icon" href="assets/images/icon.png">
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.jpg">
+    <link rel="shortcut icon" sizes="192x192" href="assets/images/favicon.jpg">
+    <link rel="apple-touch-icon" href="assets/images/favicon.jpg">
 
     <title>Plus Collective | Digital comunication tools</title>
     <meta name=”description” content=”We are a studio specialized in creating digital tools that will help you pursue
@@ -38,7 +37,7 @@
 
     <!-- MENU -->
     <!-- Float -->
-    <div id='wrp-float-menu'>
+    <div id='wrp-float-menu' class="is-hidden-mobile">
         <ul id="float-menu">
             <li data-menuanchor="home" class="active"><a href="#home">HOME</a></li>
             <li data-menuanchor="services"><a href="#services">SERVICES</a></li>
@@ -77,13 +76,13 @@
     </div>
     <!-- Overlay -->
     <div class="menu-overlay menu-overlay-contentpush">
-        <div class="container has-text-centered">
+        <div class="container">
             <div class="columns is-gapless ">
                 <div class="column is-fullheight is-half">
-                    <div class="container is-fluid  ">
+                    <div class="container">
                         <nav>
                             <ul class='linkList'>
-                                <div class="btn-home-menu navLinks">
+                                <div class="btn-home-menu navLinks is-hidden-mobile">
                                     <button class="btn"><a data-destiny="home">Home</a></button>
                                     <div class="down"></div>
                                     <div class="right"></div>
@@ -95,12 +94,17 @@
                                     <hr class="lineMenu">
                                 </li>
                                 <li><a class="navLinks" data-destiny="contact">Contact</a></li>
+                                <div class="btn-home-menu navLinks is-hidden-tablet">
+                                    <button class="btn"><a data-destiny="home">Home</a></button>
+                                    <div class="down"></div>
+                                    <div class="right"></div>
+                                </div>
                             </ul>
                         </nav>
                     </div>
                 </div>
                 <div class="column is-fullheight is-half">
-                    <div class="container is-fluid has-text-left">
+                    <div class="container has-text-left">
                         <div class="menuContact">
                             <h3>Phone</h3>
                             <a href="tel:+5411933873000">+ 54 9 11 3350 5000</a>
@@ -110,19 +114,19 @@
                         <div class="langMenu">
                             <div class="itemLang">
                                 <a src="#">
-                                    <img src="assets/images/b-es.png" alt="Spanish Flag">
+                                    <img src="assets/images/b-es.png" alt="Spanish Flag" class=" is-hidden-mobile">
                                     español
                                 </a>
                             </div>
                             <div class="itemLang">
                                 <a src="#">
-                                    <img src="assets/images/b-en.png" alt="English Flag ">
+                                    <img src="assets/images/b-en.png" alt="English Flag " class=" is-hidden-mobile">
                                     english
                                 </a>
                             </div>
                             <div class="itemLang">
                                 <a src="#">
-                                    <img src="assets/images/b-nl.png" alt="Neerlandes Flag">
+                                    <img src="assets/images/b-nl.png" alt="Neerlandes Flag" class=" is-hidden-mobile">
                                     Dutch
                                 </a>
                             </div>
@@ -138,7 +142,7 @@
     <div id="fullpage">
         <section class="page bg-hero">
             <div class="container has-text-centered">
-                <div class="columns ">
+                <div class="columns m-revcol">
                     <div class="column is-fullheight is-5 is-offset-1">
                         <div class="container  has-text-left">
                             <h2 class="subtitleHome">
@@ -163,7 +167,7 @@
                 </div>
             </div>
         </section>
-        <section class="page ">
+        <section class="page fp-auto-height-responsive">
             <div class="columns is-gapless has-text-centered">
                 <div class="column is-fullheight bg-servA">
                     <div class="container is-fluid services">
@@ -202,16 +206,16 @@
                 </div>
             </div>
         </section>
-        <section class="page bg-process">
+        <section class="page fp-auto-height-responsive bg-process ">
             <div class="container has-text-centered">
                 <div class="columns is-gapless ">
-                    <div class="column is-fullheight is-half">
-                        <div class="container is-fluid">
+                    <div class="column is-fullheight is-half usHomeLeft">
+                        <div class="container ">
                             <div class="illUs"></div>
                         </div>
                     </div>
-                    <div class="column is-fullheight is-5">
-                        <div class="container is-fluid has-text-left usHomeRight">
+                    <div class="column is-fullheight is-4 usHomeRight">
+                        <div class="container has-text-left ">
                             <h1>
                                 Who we are
                             </h1>
@@ -234,7 +238,7 @@
                 </div>
             </div>
         </section>
-        <section class="page">
+        <section class="page is-hidden-mobile">
             <div class="slide wk-guido" data-anchor="guido">
                 <div class="container worksCont">
                     <div class="columns is-vcentered ">
@@ -346,36 +350,36 @@
                         <div class="column is-3">
                             <div class="imgWrp">
                                 <a rel="noopener" rel="noreferrer" target="_blank" href="http://www.bodyhealth.com.ar/">
-                                    <img src="assets/images/body.png" alt="Body Health Logo">
+                                    <img src="assets/images/clientes/body.png" alt="Body Health Logo">
                                 </a>
                             </div>
                             <div class="imgWrp">
                                 <a rel="noopener" rel="noreferrer" target="_blank" href="http://verocorpo.com.ar/">
-                                    <img src="assets/images/vero.png" alt="Vero Corpo Logo">
+                                    <img src="assets/images/clientes/verocorpo.png" alt="Vero Corpo Logo">
                                 </a>
                             </div>
                         </div>
                         <div class="column is-3">
                             <div class="imgWrp">
                                 <a rel="noopener" rel="noreferrer" target="_blank" href="https://www.itba.edu.ar/">
-                                    <img src="assets/images/itba.png" alt="ITBA Logo">
+                                    <img src="assets/images/clientes/itba.png" alt="ITBA Logo">
                                 </a>
                             </div>
                             <div class="imgWrp">
-                                <a rel="noopener" rel="noreferrer" target="_blank">
-                                    <img src="assets/images/op.png" alt="Open Park Logo">
+                                <a rel="noopener" rel="noreferrer" target="_blank" href="https://www.planika.agency/">
+                                    <img src="assets/images/clientes/planika.png" alt="Planika Agency Logo">
                                 </a>
                             </div>
                         </div>
                         <div class="column is-3">
                             <div class="imgWrp">
                                 <a rel="noopener" rel="noreferrer" target="_blank" href="http://www.apfpasa.ch/">
-                                    <img src="assets/images/pasa.png" alt="PASA Logo">
+                                    <img src="assets/images/clientes/pasa.png" alt="PASA Logo">
                                 </a>
                             </div>
                             <div class="imgWrp">
                                 <a rel="noopener" rel="noreferrer" target="_blank" href="https://el-flamingo.com/">
-                                    <img src="assets/images/flamingo.png" alt="El Flamingo Logo">
+                                    <img src="assets/images/clientes/flaming.png" alt="El Flamingo Logo">
                                 </a>
                             </div>
                         </div>
@@ -384,83 +388,157 @@
                 </div>
             </div>
         </section>
-        <section class="page">
-            <div class="columns is-gapless contact-us">
-                <div class="column is-6 is-fullheight leftContact">
-                    <div class="wrpContactA">
-                        <div class="field">
-                            <label class="label">Name</label>
-                            <p class="control">
-                                <input class="input" type="text" placeholder="Text input">
+        <section class="is-hidden-tablet">
+            <div>
+                <div class="container wk-guido">
+                    <div class="work-mob worksCont">
+                        <div class="wrp-img">
+                            <img src="assets/images/guido-m.jpg" alt="Guido Carrillo web image">
+                        </div>
+                        <div class="workInfo">
+                            <h2>Guido Carrillo</h2>
+                            <h3>Website | Blog</h3>
+                            <p>
+                                Working for football player Guido Carrillo we created a fresh design that allowed us
+                                to
+                                align the new website with the social media counterpart, in order to enhance our
+                                client´s digital interactions with his followers.
+                                <br>
+                                Requested by: Planika Agency
                             </p>
-                        </div>
-                        <div class="twoFields">
-                            <div class="field A">
-                                <label class="label">Phone</label>
-                                <p class="control">
-                                    <input class="input" type="text" placeholder="Text input">
-                                </p>
-                            </div>
-                            <div class="field B">
-                                <label class="label">Email</label>
-                                <p class="control has-icon has-icon-right">
-                                    <input class="input" type="text" placeholder="Hello@">
-                                    <!-- <span class="icon is-small">
-                                    <i class="fa fa-warning"></i>
-                                </span> -->
-                                </p>
-                                <!-- <p class="help is-danger">This email is invalid</p> -->
-                            </div>
-                        </div>
-                        <div class="twoFields">
-                            <div class="field A">
-                                <label class="label">Project type</label>
-                                <p class="control has-icon has-icon-right is-expanded">
-                                    <span class="select">
-                                        <select>
-                                            <option>Web</option>
-                                            <option>Mobile</option>
-                                            <option>Brand Identity</option>
-                                            <option>UI/UX</option>
-                                            <option>Consultancy</option>
-                                            vv <option>Custom</option>
-                                        </select>
-                                    </span>
-                                </p>
-                            </div>
-                            <div class="field B">
-                                <label class="label">Time to market</label>
-                                <div class="control wrpRadioBtn">
-                                    <input type="radio" name="ttm" id="1" value="3wk" />
-                                    <label for="1">3Wk</label>
-
-                                    <input type="radio" name="ttm" id="2" value="3mo" />
-                                    <label for="2">4Mo</label>
-
-                                    <input type="radio" name="ttm" id="3" value="more" />
-                                    <label for="3">More</label>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="field">
-                            <label class="label">Message</label>
-                            <p class="control">
-                                <textarea class="textarea" placeholder="Textarea"></textarea>
-                            </p>
-                        </div>
-                        <div class="field is-grouped">
-                            <div class="btn-send-contact">
-                                <p class="control">
-                                    <button class="btn">Send</button>
-                                </p>
+                            <div class="btn-launch-guido">
+                                <a href="https://www.guidomcarrillo.com/" rel="noopener" rel="noreferrer"
+                                    target="_blank">
+                                    <button class="btn">launch</button>
+                                </a>
                                 <div class="down"></div>
                                 <div class="right"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="column is-6 is-fullheight rightContact">
+                <div class="container wk-sky">
+                    <div class="work-mob worksCont">
+                        <div class="wrp-img">
+                            <img src="assets/images/sky-m.jpg" alt="Guido Carrillo web image">
+                        </div>
+                        <div class="workInfo">
+                            <h2>SkyHawk</h2>
+                            <h3>Website</h3>
+                            <p>
+                                Skyhawk, a new drone security business in Argentina, requested a modern identity to
+                                make
+                                them stand out. We designed and implemented the new brand within a new website and
+                                added
+                                new features and animations in the process.
+                                <br>
+                                Requested by: Planika Agency
+                            </p>
+                            <div class="btn-launch-sky">
+                                <a href="https://skyhawksec.com/" rel="noopener" rel="noreferrer" target="_blank">
+                                    <button class="btn"> launch</button>
+                                </a>
+                                <div class="down"></div>
+                                <div class="right"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section class="page fp-auto-height-responsive">
+            <div class="columns is-gapless contact-us">
+                <div class="column is-6 is-fullheight leftContact">
+                    <div class="wrpContactA">
+                        <h1 class="titleContact is-hidden-tablet">Let´s work<br> together</h1>
+                        <form action="https://formcarry.com/s/JH0tp7wTIpNK" method="POST" accept-charset="UTF-8">
+                            <div class="field">
+                                <label class="label">Name</label>
+                                <p class="control">
+                                    <input class="input" type="text" placeholder="Text input" name="Name">
+                                </p>
+                            </div>
+                            <div class="twoFields">
+                                <div class="field A">
+                                    <label class="label">Phone</label>
+                                    <p class="control">
+                                        <input class="input" type="text" placeholder="Text input" name="Phone">
+                                    </p>
+                                </div>
+                                <div class="field B">
+                                    <label class="label">Email</label>
+                                    <p class="control has-icon has-icon-right">
+                                        <input class="input" type="text" placeholder="Hello@" name="Email">
+                                        <!-- <span class="icon is-small">
+                                    <i class="fa fa-warning"></i>
+                                </span> -->
+                                    </p>
+                                    <!-- <p class="help is-danger">This email is invalid</p> -->
+                                </div>
+                            </div>
+                            <div class="twoFields is-hidden-mobile">
+                                <div class="field A">
+                                    <label class="label">Project type</label>
+                                    <p class="control has-icon has-icon-right is-expanded">
+                                        <span class="select">
+                                            <select>
+                                                <option>Web</option>
+                                                <option>Mobile</option>
+                                                <option>Brand Identity</option>
+                                                <option>UI/UX</option>
+                                                <option>Consultancy</option>
+                                                <option>Custom</option>
+                                            </select>
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="field B">
+                                    <label class="label">Time to market</label>
+                                    <div class="control wrpRadioBtn">
+                                        <input type="radio" name="Tt-market" id="1" value="3wk" />
+                                        <label for="1">3Wk</label>
+
+                                        <input type="radio" name="Tt-market" id="2" value="3mo" />
+                                        <label for="2">4Mo</label>
+
+                                        <input type="radio" name="Tt-market" id="3" value="more" />
+                                        <label for="3">More</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">Message</label>
+                                <p class="control">
+                                    <textarea class="textarea" placeholder="Textarea" name="Message"></textarea>
+                                </p>
+                            </div>
+                            <div class="field is-grouped">
+                                <div class="btn-send-contact">
+                                    <p class="control">
+                                        <button class="btn" type="submit">Send</button>
+                                    </p>
+                                    <div class="down"></div>
+                                    <div class="right"></div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="wrp-contact-mob is-hidden-tablet">
+                            <div class="p-b-xs">
+                                <h3>Call us,</h3>
+                                <a href="tel:+54 11 22558844">+ 54 9 11 3350 5000</a>
+                            </div>
+                            <div class="p-b-lg">
+                                <h3>or maybe an email?</h3>
+                                <a href="mailto:us@pluscollective.io">hello@pluscollective.io</a>
+                            </div>
+                            <p>
+                                Copyright 2020, PLUS COLLECTIVE<br>All rights reserved. Terms & conditions | Privacy
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="column is-6 is-fullheight rightContact is-hidden-mobile	
+                ">
                     <div class="wrpContactB">
                         <h1 class="titleContact">Let´s work together</h1>
                         <div class="p-b-md">

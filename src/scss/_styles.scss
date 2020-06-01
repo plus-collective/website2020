@@ -35,8 +35,8 @@ body {
 
 .container {
   @include mobile {
-    padding-left: 32px;
-    padding-right: 32px;
+    // padding-left: 5%;
+    padding: 5%;
   }
 }
 
@@ -46,7 +46,9 @@ body {
   align-items: center;
 
   @include mobile {
-    min-height: 50vh !important;
+    // min-height: 100px;
+    min-height: inherit;
+    // align-items: inherit;
   }
 }
 
@@ -68,10 +70,14 @@ a {
       cursor: pointer;
       transform: scale(1.1);
     }
+    @include mobile {
+      height: 50px;
+    }
   }
   @include mobile {
     top: 20px;
     left: 20px;
+    position: absolute !important;
   }
 }
 
@@ -79,6 +85,10 @@ a {
 .illHome {
   min-width: 100%;
   height: 60vh;
+  @include mobile {
+    height: inherit;
+    margin-top: 15%;
+  }
 }
 
 .titleHome {
@@ -91,12 +101,26 @@ a {
   & span {
     color: #e2e1cf;
   }
+
+  @include mobile {
+    font-size: 1.5rem;
+  }
 }
 
 .subtitleHome {
   @extend .is-size-2;
   font-family: "CrimsonTextReg";
   color: #8de2ca;
+  @include mobile {
+    font-size: 1.5rem !important;
+  }
+}
+
+@include mobile {
+  .m-revcol {
+    flex-direction: column-reverse;
+    display: flex;
+  }
 }
 
 //SERVICE
@@ -125,12 +149,38 @@ a {
     margin-top: 2rem !important;
     @include my-box-btn(140px, 30px, #fac903, $bg-servA, #502e3f, 6px, true);
   }
+
+  @include mobile {
+    padding: 10%;
+
+    & h1 {
+      font-size: 1.8rem !important;
+    }
+    & ul li {
+      font-size: 1rem !important;
+    }
+    & hr {
+      height: 3px;
+      margin: 1.5rem 35% 1rem 35%;
+    }
+  }
 }
 
 //US -> SECTION
 .illUs {
   width: 100%;
   height: 60vh;
+
+  @include mobile {
+    height: 40vh;
+    margin-top: 10%;
+  }
+}
+
+.usHomeLeft {
+  @include mobile {
+    align-items: center !important;
+  }
 }
 
 .usHomeRight {
@@ -149,8 +199,23 @@ a {
 
   & .btn-us-home {
     @include my-box-btn(140px, 30px, #f37377, $bg-process, #502e3f, 6px, false);
+    // padding-bottom: 10%;
     & a {
       color: #502e3f;
+    }
+  }
+
+  @include mobile {
+    padding: 5% !important;
+
+    & h1 {
+      font-size: 1.5rem !important;
+      font-weight: 900;
+    }
+
+    & p {
+      font-size: 1rem !important;
+      font-weight: 100;
     }
   }
 }
@@ -213,7 +278,6 @@ a {
 
 .usTeam {
   background-color: $bg-contact;
-  display: none;
 
   &.active {
     display: flex;
@@ -245,16 +309,12 @@ a {
     position: relative;
     width: 100%;
   }
-
   & .illusTeam {
     position: absolute;
-    left: 33%;
-    width: 66%;
+    left: 25%;
+    width: 90%;
     height: 50vh;
-    & svg {
-      height: 50vh;
-      width: 100%;
-    }
+    top: 0;
   }
 }
 
@@ -309,6 +369,68 @@ a {
   }
 }
 
+.usMobile {
+  & .teamName {
+    & .teamMember {
+      color: #502e3f;
+      & h2 {
+        font-size: 1rem !important;
+        padding-top: 0.5rem;
+        // padding-bottom: 0.5rem;
+        font-weight: 900;
+      }
+      & p {
+        @extend .is-size-6;
+        line-height: 1.5em;
+        color: #17283a;
+      }
+    }
+  }
+  & .illusTeam-mob {
+    margin-top: 15%;
+    width: 90%;
+    margin-left: 5%;
+  }
+  & .titleTeam-mob {
+    font-size: 1.8rem;
+    font-weight: 900;
+    padding-bottom: 2rem;
+    color: #17283a;
+  }
+  & h3 {
+    @extend .is-size-5, .p-t-md, .p-b-md;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+  & .itemPr {
+    & img {
+      // position: absolute;
+      margin-top: 10%;
+      height: 5em;
+      bottom: 1em;
+      left: 6em;
+    }
+  }
+  & .btn-home-about-mob {
+    margin-left: 5%;
+    @extend .m-t-lg, .m-b-lg;
+    font-size: 1.2em;
+    color: #502e3f;
+    @include my-box-btn(
+      150px,
+      35px,
+      #fac903,
+      $bg-contact-r,
+      #562b3e,
+      6px,
+      false
+    );
+    & a {
+      color: #502e3f;
+    }
+  }
+}
+
 //WORKS
 .worksCont {
   & .column:first-child {
@@ -352,14 +474,55 @@ a {
       }
     }
   }
+
+  @include mobile {
+    .workInfo {
+      // position: absolute;
+      top: -5vh;
+      left: 10%;
+      width: 80%;
+      background-color: #e2e1cf;
+      padding: 2em;
+      z-index: 50;
+      position: relative;
+
+      & h2 {
+        font-size: 1.5em;
+        font-weight: 600;
+      }
+
+      & h3 {
+        font-size: 1em;
+        color: grey;
+        font-weight: 400;
+      }
+      & p {
+        // @extend .p-t-md, .p-b-md;
+        padding: 1rem 0;
+        font-size: 0.8em;
+      }
+      & a {
+        color: inherit;
+      }
+    }
+    .wrp-img {
+      z-index: 40;
+    }
+  }
 }
 
 .wk-guido {
   background-color: $bg-works;
+  @include mobile {
+    padding: 0;
+  }
   & .worksCont {
     & .workInfo {
       box-shadow: -25px 25px 0px 0px #1c3562;
       color: #1c3562;
+      @include mobile {
+        box-shadow: none;
+      }
       & .btn-launch-guido {
         @include my-box-btn(
           100px,
@@ -378,10 +541,16 @@ a {
 
 .wk-sky {
   background-color: #2b2b2b;
+  @include mobile {
+    padding: 0;
+  }
   & .worksCont {
     & .workInfo {
       box-shadow: -25px 25px 0px 0px #2b2b2b;
       color: #2b2b2b;
+      @include mobile {
+        box-shadow: none;
+      }
       & .btn-launch-sky {
         @include my-box-btn(
           100px,
@@ -400,10 +569,16 @@ a {
 
 .wk-ga {
   background-color: #3a3a47;
+  @include mobile {
+    padding: 0;
+  }
   & .worksCont {
     & .workInfo {
       box-shadow: -25px 25px 0px 0px #3a3a47;
       color: #3a3a47;
+      @include mobile {
+        box-shadow: none;
+      }
       & .btn-launch-sky {
         @include my-box-btn(
           100px,
@@ -489,7 +664,6 @@ a {
       display: flex;
       flex-direction: row;
       align-items: center;
-      font-family: "AkkuratB";
       position: relative;
 
       & ul {
@@ -502,6 +676,7 @@ a {
       & a {
         color: #17283a;
         @extend .is-size-7;
+        font-weight: 900;
       }
       & a img {
         height: 80px;
@@ -554,7 +729,6 @@ a {
       border-width: 0 0 1px;
       border-color: #3e9c8f;
       box-shadow: none;
-      font-family: Akkurat;
       color: #17283a;
       padding-left: 0px;
 
@@ -593,7 +767,6 @@ a {
           border-width: 0 0 1px;
           border-color: #3e9c8f;
           box-shadow: none;
-          font-family: Akkurat;
           color: #17283a;
           width: 100%;
           padding-left: 0px;
@@ -619,7 +792,6 @@ a {
         input[type="radio"] + label {
           position: relative;
           width: 33%;
-          font-family: Akkurat;
           color: #17283a;
         }
 
@@ -663,7 +835,6 @@ a {
       border-width: 0 0 1px;
       border-color: #3e9c8f;
       box-shadow: none;
-      font-family: Akkurat;
       color: #17283a;
       resize: none;
       min-height: 6em !important;
@@ -709,10 +880,44 @@ a {
       color: #3e9c8f;
     }
   }
+
+  @include mobile {
+    background-color: $bg-contact-r;
+
+    & .titleContact {
+      font-size: 1.5rem;
+      font-weight: 700;
+      padding-bottom: 2rem;
+    }
+    & .wrp-contact-mob {
+      padding-top: 2rem;
+      & p {
+        font-size: 0.7rem;
+      }
+    }
+    & .wrpContactA {
+      color: #17283a;
+      width: 100%;
+      padding: 10%;
+
+      & label {
+        font-weight: 100;
+      }
+
+      & h3 {
+        font-size: 1.2rem;
+        font-weight: 100;
+      }
+
+      & a {
+        color: white;
+        font-size: 1.2rem;
+      }
+    }
+  }
 }
 
 // 404
-
 .fof {
   background-color: #5ac7a8;
   width: 100%;
@@ -727,6 +932,7 @@ a {
     @extend .is-size-3;
     color: #17283a;
     font-weight: 900;
+    padding-bottom: 1rem;
   }
 
   & .subtitle {
@@ -734,6 +940,7 @@ a {
     font-family: "CrimsonTextReg";
     color: #8de2ca;
     font-weight: 900;
+    padding-bottom: 1rem;
   }
 
   & .btn-fof {

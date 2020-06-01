@@ -145,6 +145,9 @@
   position: relative;
   top: 50%;
   height: 60%;
+  @include mobile {
+    text-align: left;
+  }
 }
 
 .menu-overlay ul {
@@ -155,6 +158,9 @@
   height: 100%;
   position: relative;
   text-align: left;
+  @include mobile {
+    padding-top: 50px;
+  }
 }
 
 .menu-overlay ul li {
@@ -172,7 +178,9 @@
   color: #f37377;
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
-  font-family: AkkuratB;
+  @include mobile {
+    font-size: 40px;
+  }
 }
 
 .menu-overlay ul li a:hover,
@@ -188,6 +196,9 @@
   & a {
     color: #502e3f;
   }
+  @include mobile {
+    margin-bottom: 0;
+  }
 }
 
 .lineMenu {
@@ -197,7 +208,6 @@
 }
 
 .menuContact {
-  font-family: Akkurat;
   line-height: 2;
   @extend .is-size-4;
 
@@ -209,6 +219,16 @@
   }
   & a:hover {
     color: white;
+  }
+  @include mobile {
+    line-height: 1;
+    & h3 {
+      font-size: 1rem;
+      padding-top: 10px;
+    }
+    & a {
+      font-size: 1rem;
+    }
   }
 }
 
@@ -247,6 +267,10 @@
     width: 2.5em;
     padding-bottom: 0.5em;
     transition: all 0.2s ease-in-out;
+  }
+
+  @include mobile {
+    top: 50px;
   }
 }
 
