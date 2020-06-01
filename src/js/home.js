@@ -18,6 +18,8 @@ var animations = function (){
 	var illustrationEP = document.querySelector("div.illusTeam");
 	var illustrationEPmob = document.querySelector("div.illusTeam-mob");
 
+	var pathEP = require('../assets/animations/EP.json');
+
 	lottie.loadAnimation({
 		container: illustrationHome, 
 		renderer: 'svg',
@@ -39,7 +41,7 @@ var animations = function (){
 		renderer: 'svg',
 		loop: true,
 		autoplay: true,
-		path: require('../assets/animations/EP.json') 
+		path: pathEP
 	});
 
 	lottie.loadAnimation({
@@ -47,7 +49,7 @@ var animations = function (){
 		renderer: 'svg',
 		loop: true,
 		autoplay: true,
-		path: require('../assets/animations/EP.json') 
+		path: pathEP
 	});
 
 }
