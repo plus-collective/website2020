@@ -1,4 +1,3 @@
-import fullpageSH from '../js/fullpage.scrollHorizontally.min.js';
 import fullpage from '../../node_modules/fullpage.js/dist/fullpage.extensions.min.js';
 
 // -- START Full Page init -->
