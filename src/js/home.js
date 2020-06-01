@@ -18,7 +18,7 @@ var animations = function (){
 	var illustrationEP = document.querySelector("div.illusTeam");
 	var illustrationEPmob = document.querySelector("div.illusTeam-mob");
 
-	var pathEP = require('../assets/animations/EP.json');
+	var pathEP = require('../assets/animations/ep.json');
 
 	lottie.loadAnimation({
 		container: illustrationHome, 
