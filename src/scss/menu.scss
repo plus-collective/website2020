@@ -23,8 +23,11 @@
   }
 
   @include mobile {
-    top: 20px;
+    top: 22px;
     right: 20px;
+    & img {
+      height: 48px;
+    }
   }
 }
 
@@ -158,9 +161,6 @@
   height: 100%;
   position: relative;
   text-align: left;
-  @include mobile {
-    padding-top: 50px;
-  }
 }
 
 .menu-overlay ul li {
@@ -270,7 +270,7 @@
   }
 
   @include mobile {
-    top: 50px;
+    top: 25px;
   }
 }
 

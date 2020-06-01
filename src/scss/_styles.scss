@@ -59,7 +59,7 @@ a {
 //BRAND ICON
 .brandIcon {
   position: fixed;
-  z-index: 860;
+  z-index: 550;
   top: 25px;
   left: 25px;
 
@@ -104,6 +104,9 @@ a {
 
   @include mobile {
     font-size: 1.5rem;
+  }
+  @media only screen and (max-height: 600px) {
+    font-size: 1.2rem;
   }
 }
 
@@ -379,12 +382,12 @@ a {
         // padding-bottom: 0.5rem;
         font-weight: 900;
       }
-      & p {
-        @extend .is-size-6;
-        line-height: 1.5em;
-        color: #17283a;
-      }
     }
+  }
+  & p {
+    @extend .is-size-6;
+    line-height: 1.5em;
+    color: #17283a;
   }
   & .illusTeam-mob {
     margin-top: 15%;
@@ -401,6 +404,7 @@ a {
     @extend .is-size-5, .p-t-md, .p-b-md;
     text-transform: uppercase;
     font-weight: 900;
+    color: #502e3f;
   }
   & .itemPr {
     & img {
@@ -882,7 +886,7 @@ a {
   }
 
   @include mobile {
-    background-color: $bg-contact-r;
+    // background-color: $bg-contact-r;
 
     & .titleContact {
       font-size: 1.5rem;
@@ -926,6 +930,9 @@ a {
   & .illFof {
     width: 100%;
     height: 30vh;
+    @include mobile {
+      margin-top: 10%;
+    }
   }
 
   & .title {
@@ -933,6 +940,9 @@ a {
     color: #17283a;
     font-weight: 900;
     padding-bottom: 1rem;
+    @include mobile {
+      font-size: 1.5rem !important;
+    }
   }
 
   & .subtitle {
@@ -941,6 +951,9 @@ a {
     color: #8de2ca;
     font-weight: 900;
     padding-bottom: 1rem;
+    @include mobile {
+      font-size: 1.5rem !important;
+    }
   }
 
   & .btn-fof {

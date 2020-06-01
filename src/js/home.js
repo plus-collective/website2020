@@ -102,14 +102,17 @@ var silentNavigation = function(){
 	} else {
 		//at Home
 		var actualMove = function(event) {
-			
 			if(event.target.dataset.destiny === "about"){
 				event.preventDefault();
 				window.location.href = "/about.html";
 				// pageLoader("open", 500, "/about.html");
 			} else{
 				// pageLoader("toggle", 500, event.target.dataset.destiny);
-				fullpage_api.silentMoveTo(event.target.dataset.destiny);
+				if(window.innerWidth < 768 && event.target.dataset.destiny === "works"){
+					window.location.href = "/#works-m";
+				} else{
+					fullpage_api.silentMoveTo(event.target.dataset.destiny);
+				}
 			}
 		};
 	}
