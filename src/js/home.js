@@ -77,7 +77,8 @@ var menu = function() {
 			} else{
 				// pageLoader("toggle", 500, event.target.dataset.destiny);
 				if(window.innerWidth < 768 && event.target.dataset.destiny === "works"){
-					window.location.href = "/#works-m";
+					// window.location.href = "/#works-m";	
+					pageLoader("toggle", 500, event.target.dataset.destiny);				
 				} else{
 					pageLoader("toggle", 500, event.target.dataset.destiny);
 				}
@@ -125,7 +126,11 @@ var pageLoader = function( action , time, path) {
 	} else if (action === "toggle"){
 		pageLoader.classList.add('page-loader-open');
 		setTimeout(function () {
-			fullpage_api.silentMoveTo(path);
+			if(window.innerWidth < 768 && path === "works"){
+				window.location.href = "/#works-m";					
+			}else{
+				fullpage_api.silentMoveTo(path);
+			}
 			toggleMenuOverlay();
 		}, 500);
 
@@ -157,6 +162,14 @@ var goHome = function() {
 	linkHome.onclick = function (e) {
 		e.preventDefault();
 		pageLoader("open", 500, "/");
+	}
+
+	var linkHomeAbout = document.querySelector("div.btn-home-about-mob");
+	if(linkHomeAbout !== null){
+		linkHomeAbout.onclick = function (e) {
+			e.preventDefault();
+			pageLoader("open", 500, "/");
+		}
 	}
 };
 
