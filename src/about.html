@@ -22,6 +22,16 @@
     <meta property="og:url" content="https://pluscollective.io">
     <meta name="twitter:card" content="summary_large_image">
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134171689-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-134171689-1');
+    </script>
+
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="../node_modules/fullpage.js/dist/fullpage.css" />
     <link rel="stylesheet" href="./scss/_styles.scss" />
@@ -561,7 +571,8 @@
                 <div class="column is-6 is-fullheight leftContact">
                     <div class="wrpContactA">
                         <h1 class="titleContact is-hidden-tablet">Let´s work<br> together</h1>
-                        <form action="https://formcarry.com/s/JH0tp7wTIpNK" method="POST" accept-charset="UTF-8">
+                        <form action="https://formcarry.com/s/JH0tp7wTIpNK" method="POST" accept-charset="UTF-8"
+                            id="c-form">
                             <div class="field">
                                 <label class="label">Name</label>
                                 <p class="control">
@@ -625,7 +636,9 @@
                             <div class="field is-grouped">
                                 <div class="btn-send-contact">
                                     <p class="control">
-                                        <button class="btn" type="submit">Send</button>
+                                        <button class="btn g-recaptcha"
+                                            data-sitekey="6Leh0JAUAAAAAIBO0V6QaE_06XAnTzn0QOaP2fv5"
+                                            data-callback='onSubmit' data-action='submit'>Send</button>
                                     </p>
                                     <div class="down"></div>
                                     <div class="right"></div>
@@ -696,6 +709,13 @@
     <script src="js/home.js"></script>
     <script src="js/fullpage.scrollHorizontally.min.js"></script>
     <script src="js/fp-about.js"></script>
+
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+        function onSubmit(token) {
+            document.getElementById("c-form").submit();
+        }
+    </script>
 </body>
 
 </html>
