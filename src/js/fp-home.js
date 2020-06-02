@@ -1,5 +1,6 @@
 import fullpage from '../../node_modules/fullpage.js/dist/fullpage.extensions.min.js';
 
+
 // -- START Full Page init -->
 new fullpage('#fullpage', {
     scrollHorizontally: true,

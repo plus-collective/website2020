@@ -6,7 +6,7 @@
   "scripts": {
     "start": "parcel src/index.html -p 7000 --open",
     "clean": "rm -rf dist/*",
-    "build:parcel": "parcel build src/index.html --public-url ./",
+    "build:parcel": "parcel build --no-content-hash src/index.html --public-url ./",
     "build": "npm run clean && npm run build:parcel",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
