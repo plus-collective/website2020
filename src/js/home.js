@@ -19,37 +19,53 @@ var animations = function (){
 
 	var pathEP = require('../assets/animations/ep.json');
 
-	lottie.loadAnimation({
-		container: illustrationHome, 
-		renderer: 'svg',
-		loop: true,
-		autoplay: true,
-		path: require('../assets/animations/home.json')
-	});
+	if (window.location.href.indexOf("about.html") > -1){
+		
+		lottie.loadAnimation({
+			container: illustrationUs, 
+			renderer: 'svg',
+			loop: true,
+			autoplay: true,
+			path: require('../assets/animations/us.json') 
+		});
 
-	lottie.loadAnimation({
-		container: illustrationUs, 
-		renderer: 'svg',
-		loop: true,
-		autoplay: true,
-		path: require('../assets/animations/us.json') 
-	});
+		if(window.innerWidth > 768){
+			lottie.loadAnimation({
+				container: illustrationEP, 
+				renderer: 'svg',
+				loop: true,
+				autoplay: true,
+				path: pathEP
+			});
+		} else {
+			lottie.loadAnimation({
+				container: illustrationEPmob, 
+				renderer: 'svg',
+				loop: true,
+				autoplay: true,
+				path: pathEP
+			});
+		}
 
-	lottie.loadAnimation({
-		container: illustrationEP, 
-		renderer: 'svg',
-		loop: true,
-		autoplay: true,
-		path: pathEP
-	});
+	} else {
+		lottie.loadAnimation({
+			container: illustrationHome, 
+			renderer: 'svg',
+			loop: true,
+			autoplay: true,
+			path: require('../assets/animations/home.json')
+		});
+		lottie.loadAnimation({
+			container: illustrationUs, 
+			renderer: 'svg',
+			loop: true,
+			autoplay: true,
+			path: require('../assets/animations/us.json') 
+		});
+	}
+	
 
-	lottie.loadAnimation({
-		container: illustrationEPmob, 
-		renderer: 'svg',
-		loop: true,
-		autoplay: true,
-		path: pathEP
-	});
+	
 
 }
 

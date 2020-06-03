@@ -259,7 +259,7 @@
                 <div class="container worksCont">
                     <div class="columns is-vcentered ">
                         <div class="column  is-9 is-offset-1 ">
-                            <video data-autoplay loop>
+                            <video data-autoplay loop muted>
                                 <source src="assets/video/guido.mp4" type="video/mp4">
                             </video>
                         </div>
@@ -293,7 +293,7 @@
                 <div class="container worksCont">
                     <div class="columns is-vcentered ">
                         <div class="column  is-9 is-offset-1 ">
-                            <video data-autoplay loop>
+                            <video data-autoplay loop muted>
                                 <source src="assets/video/sky.mp4" type="video/mp4">
                             </video>
                         </div>
@@ -327,7 +327,7 @@
                 <div class="container worksCont">
                     <div class="columns is-vcentered ">
                         <div class="column  is-9 is-offset-1 ">
-                            <video data-autoplay loop>
+                            <video data-autoplay loop muted>
                                 <source src="assets/video/ga.mp4" type="video/mp4">
                             </video>
                         </div>
@@ -530,9 +530,7 @@
                             <div class="field is-grouped">
                                 <div class="btn-send-contact">
                                     <p class="control">
-                                        <!-- <button class="btn" type="submit">Send</button> -->
-                                        <button class="btn g-recaptcha" data-sitekey="6Leh0JAUAAAAAIBO0V6QaE_06XAnTzn0QOaP2fv5"
-                                            data-callback='onSubmit' data-action='submit'>Send</button>
+                                        <button class="btn" type="submit">Send</button>
                                     </p>
                                     <div class="down"></div>
                                     <div class="right"></div>
@@ -605,13 +603,6 @@
     <script src="js/home.js"></script>
     <script src="js/fullpage.scrollHorizontally.min.js"></script>
     <script src="js/fp-home.js"></script>
-
-    <script src="https://www.google.com/recaptcha/api.js"></script>
-    <script>
-        function onSubmit(token) {
-            document.getElementById("c-form").submit();
-        }
-    </script>
 </body>
 
 </html>
