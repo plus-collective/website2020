@@ -13,6 +13,9 @@
 
   & img {
     width: 150px;
+    @include mobile {
+      margin-bottom: 60%;
+    }
   }
   transform: translateY(-100vh);
   transition: transform 0.5s ease-in;

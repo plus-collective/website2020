@@ -105,7 +105,7 @@ a {
   @include mobile {
     font-size: 1.5rem;
   }
-  @media only screen and (max-height: 600px) {
+  @media only screen and (max-height: 570px) {
     font-size: 1.2rem;
   }
 }
@@ -239,6 +239,7 @@ a {
 
   & .wrpMenuUs {
     padding-left: 33.333%;
+    padding-top: 10%;
     height: 40vh;
     width: 90%;
 
