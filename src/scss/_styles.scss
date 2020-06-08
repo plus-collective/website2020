@@ -740,6 +740,10 @@ a {
         & p {
           font-size: 0.6rem;
           line-height: 2em;
+          & a {
+            font-size: 0.6rem;
+            font-weight: 100;
+          }
         }
       }
     }
