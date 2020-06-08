@@ -123,11 +123,19 @@ a {
   }
 }
 
+//SAFARI HACK
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+    .m-revcol {
+      height: 80vh;
+    }
+  }
+}
+
 @include mobile {
   .m-revcol {
     flex-direction: column-reverse;
     display: flex;
-
     & .heroTitle {
       margin-top: -15%;
     }
