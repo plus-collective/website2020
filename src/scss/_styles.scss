@@ -847,19 +847,6 @@ a {
           margin-right: 0.2em;
         }
 
-        & input[type="radio"]#1 + label:before {
-          background: #359457;
-        }
-
-        & input[type="radio"]#2 + label:before {
-          background: #ffcd2f;
-        }
-
-        & input[type="radio"]#3 + label:before {
-          background: #f27930;
-          margin-left: 0.2em;
-        }
-
         input[type="radio"]:checked + label:after {
           content: "✓";
           color: #17283a;
@@ -936,6 +923,10 @@ a {
       padding-top: 2rem;
       & p {
         font-size: 0.7rem;
+        & a {
+          font-size: 0.7rem;
+          font-weight: 100;
+        }
       }
     }
     & .wrpContactA {
@@ -1000,6 +991,13 @@ a {
     & a {
       color: #502e3f;
     }
+  }
+}
+
+.privacy {
+  @extend .fof;
+  @include mobile {
+    padding-top: 100px;
   }
 }
 
